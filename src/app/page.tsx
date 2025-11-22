@@ -1,3 +1,11 @@
+"use client";
+
+import { ChevronDown, Check } from "lucide-react";
+import { useState } from "react";
+import WhatWeDoSection from "./components/WhatWeDoSection";
+import HowToUseSection from "./components/HowToUseSection";
+import PricingSection from "./components/PricingSection";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -58,12 +66,17 @@ export default function Home() {
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight text-white mb-8 drop-shadow-lg">
-              Build your travel business without quitting your job — all from
-              your phone.
+              {/* Build your travel business without quitting your job — all from
+              your phone. */}
+              Grow Your Travel Business Without Quitting Your Job
             </h1>
           </div>
         </div>
       </section>
+
+      <WhatWeDoSection />
+      <HowToUseSection />
+      <PricingSection />
 
       {/* Contact Section */}
       <section className="bg-black py-24">
@@ -83,9 +96,79 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-800 bg-black/50 py-8">
+      <footer className="border-t border-gray-800 bg-black/50 py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-lg font-bold text-white mb-4">
+                Infinite Packages
+              </h3>
+              <p className="text-sm text-gray-400">
+                Build your travel business without quitting your job.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4">
+                Quick Links
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    className="text-sm text-gray-400 hover:text-orange-600 transition"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-sm text-gray-400 hover:text-orange-600 transition"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-sm text-gray-400 hover:text-orange-600 transition"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-sm text-gray-400 hover:text-orange-600 transition"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4">Legal</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="/terms"
+                    className="text-sm text-gray-400 hover:text-orange-600 transition"
+                  >
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/privacy"
+                    className="text-sm text-gray-400 hover:text-orange-600 transition"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
             <p className="text-sm text-gray-400">
               Copyright © 2025 Infinite Packages - All Rights Reserved.
             </p>
