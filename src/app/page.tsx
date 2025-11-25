@@ -10,43 +10,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="border-b border-gray-800 bg-black/50 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <img
-              src="/logo.png"
-              alt="Infinite Packages"
-              className="h-20 w-auto"
-            />
-            <nav className="hidden gap-8 md:flex">
-              <a
-                href="#"
-                className="text-sm text-gray-300 hover:text-white transition"
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-300 hover:text-white transition"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-300 hover:text-white transition"
-              >
-                Services
-              </a>
-              <a
-                href="#"
-                className="text-sm text-gray-300 hover:text-white transition"
-              >
-                Contact
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
+    
       {/* test  */}
       {/* test case3 */}
 

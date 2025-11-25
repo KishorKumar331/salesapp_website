@@ -1,15 +1,6 @@
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <header className="border-b border-gray-800 bg-black/50 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-4 py-4">
-          <a href="/" className="flex items-center">
-            <img src="/logo.png" alt="Infinite Packages" className="h-12 w-auto" />
-          </a>
-        </div>
-      </header>
-
-      <main className="max-w-3xl mx-auto px-4 py-12">
+    <div className="max-w-3xl mx-auto px-4 py-12 w-full">
         <h1 className="text-3xl font-bold mb-6">Terms & Conditions</h1>
         <p className="text-gray-400 text-sm mb-8">Last updated: November 2025</p>
         
@@ -85,18 +76,6 @@ export default function TermsPage() {
             For questions about these Terms, contact us at support@journeyrouters.com
           </p>
         </div>
-      </main>
-
-      <footer className="border-t border-gray-800 bg-black/50 py-6 mt-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <p className="text-gray-500">© 2025 Infinite Packages. All rights reserved.</p>
-            <a href="/privacy" className="text-gray-400 hover:text-orange-600 transition mt-2 md:mt-0">
-              Privacy Policy
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

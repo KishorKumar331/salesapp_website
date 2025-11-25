@@ -1,13 +1,7 @@
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="border-b border-gray-800 bg-black/50 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-4 py-4">
-          <a href="/" className="flex items-center">
-            <img src="/logo.png" alt="Infinite Packages" className="h-12 w-auto" />
-          </a>
-        </div>
-      </header>
+  
 
       <main className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
