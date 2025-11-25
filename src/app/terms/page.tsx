@@ -10,42 +10,79 @@ export default function TermsPage() {
       </header>
 
       <main className="max-w-3xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
-        <p className="text-gray-400 text-sm mb-8">Effective: November 2025</p>
+        <h1 className="text-3xl font-bold mb-6">Terms & Conditions</h1>
+        <p className="text-gray-400 text-sm mb-8">Last updated: November 2025</p>
         
         <div className="space-y-6 text-gray-300 text-sm leading-relaxed">
           <section>
-            <h2 className="text-lg font-semibold mb-2">1. Acceptance of Terms</h2>
-            <p>By accessing or using our services, you agree to these terms.</p>
+            <h2 className="text-lg font-semibold mb-2">1. Use of the Service</h2>
+            <p>You must be at least 18 years old, provide accurate information, and use the Service only for lawful business purposes. Misuse, hacking, modification, or reverse engineering is prohibited. We may suspend or terminate accounts violating these rules.</p>
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold mb-2">2. Service Description</h2>
-            <p>We provide travel business management tools for creating and managing travel packages.</p>
+            <h2 className="text-lg font-semibold mb-2">2. User Account</h2>
+            <p>You are responsible for maintaining the confidentiality of your login credentials and all activities under your account. We are not liable for any loss caused by unauthorized access due to user negligence.</p>
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold mb-2">3. Account Responsibility</h2>
-            <p>You're responsible for maintaining the confidentiality of your account and password.</p>
+            <h2 className="text-lg font-semibold mb-2">3. Subscription, Billing & Payments</h2>
+            <p>Some features require a paid subscription or pay-per-use credits. Prices may change with prior notice. Payments are processed by third-party gateways like PayU. We do not store card or UPI details.</p>
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold mb-2">4. Payment Terms</h2>
-            <p>All fees are non-refundable. We may change our pricing with 30 days' notice.</p>
+            <h2 className="text-lg font-semibold mb-2">4. Generated Data (Quotes, Invoices, PDFs)</h2>
+            <p>The Service allows creation of quotations, itineraries, invoices, and client data. You are responsible for accuracy. We provide tools only—not legal or financial advice.</p>
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold mb-2">5. Termination</h2>
-            <p>We may terminate or suspend access to our service immediately for violations.</p>
+            <h2 className="text-lg font-semibold mb-2">5. Acceptable Use Policy</h2>
+            <p>You agree not to upload harmful/illegal content, send spam, commit fraud, harass users, interfere with system operations, or attempt unauthorized access. Violations may result in termination.</p>
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold mb-2">6. Changes to Terms</h2>
-            <p>We may modify these terms at any time. Continued use constitutes acceptance.</p>
+            <h2 className="text-lg font-semibold mb-2">6. Intellectual Property</h2>
+            <p>All code, design, content, and branding belong to Journey Routers Pvt Ltd. You may not copy, resell, or replicate any part of the Service.</p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold mb-2">7. Third-Party Services</h2>
+            <p>The app integrates with AWS, payment gateways, SMS/email providers, and travel data APIs. We are not responsible for failures or actions of third-party services.</p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold mb-2">8. Limitation of Liability</h2>
+            <p>We are not liable for business loss, data loss, downtime, incorrect data input, or indirect damages. Use the platform at your own risk.</p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold mb-2">9. Data & Privacy</h2>
+            <p>Your personal data is processed according to our Privacy Policy, available in the app and on the website.</p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold mb-2">10. Termination</h2>
+            <p>We may suspend or terminate your account for violations or misuse. You may request account deletion anytime.</p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold mb-2">11. Changes to Terms</h2>
+            <p>We may update these Terms periodically. Continued use means acceptance of updated Terms.</p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold mb-2">12. Contact</h2>
+            <p>
+              Journey Routers Private Limited<br />
+              Khasra 275, 2nd Floor, Westend Marg, Saidulajab,<br />
+              Saket, New Delhi – 110030<br />
+              Phone: 9999935176<br />
+              Email: support@journeyrouters.com<br />
+              Website: www.journeyrouters.com
+            </p>
           </section>
 
           <p className="pt-4 text-gray-400 text-xs">
-            For questions about these Terms, contact us at support@infinitepackages.com
+            For questions about these Terms, contact us at support@journeyrouters.com
           </p>
         </div>
       </main>

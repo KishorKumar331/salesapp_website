@@ -16,36 +16,46 @@ export default function PrivacyPolicy() {
         <div className="space-y-6 text-gray-300 text-sm leading-relaxed">
           <section>
             <h2 className="text-lg font-semibold mb-2">1. Information We Collect</h2>
-            <p>We collect account details, contact information, and usage data when you use our services.</p>
+            <p>We collect your basic details (name, email, phone, company), client info, trip and booking data, quotation/invoice data, and device usage details. Payment card/UPI data is not stored.</p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold mb-2">2. How We Use Your Data</h2>
-            <p>To provide and improve our services, process payments, and communicate with you about your account.</p>
+            <p>We use your data to manage your account, generate quotations & invoices, improve app performance, send notifications, process payments, and provide support. We never sell your data.</p>
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold mb-2">3. Data Sharing</h2>
-            <p>We don't sell your data. We only share it with service providers who help us operate our platform.</p>
+            <h2 className="text-lg font-semibold mb-2">3. Sharing of Data</h2>
+            <p>We share data only with AWS services, payment gateways, SMS/email providers, and legal authorities when necessary.</p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold mb-2">4. Data Security</h2>
-            <p>We implement security measures to protect your information, but no system is 100% secure.</p>
+            <p>Your data is stored securely on encrypted AWS infrastructure with strict access control.</p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold mb-2">5. Your Rights</h2>
-            <p>You can access, update, or delete your account information at any time.</p>
+            <p>You may request to view, correct, delete, or export your data by contacting support@journeyrouters.com.</p>
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold mb-2">6. Changes to This Policy</h2>
-            <p>We'll notify you of significant changes. Continued use means acceptance of changes.</p>
+            <h2 className="text-lg font-semibold mb-2">6. Data Retention</h2>
+            <p>We retain your data as long as your account is active or required for legal and financial compliance.</p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold mb-2">7. Contact</h2>
+            <p>
+              Journey Routers Private Limited<br />
+              New Delhi, India<br />
+              Phone: 9999935176<br />
+              Email: support@journeyrouters.com
+            </p>
           </section>
 
           <p className="pt-4 text-gray-400 text-xs">
-            For privacy-related questions, contact us at privacy@infinitepackages.com
+            For privacy-related questions, contact us at support@journeyrouters.com
           </p>
         </div>
       </main>
