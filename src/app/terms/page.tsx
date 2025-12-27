@@ -32,7 +32,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-lg font-semibold mb-2">6. Intellectual Property</h2>
-            <p>All code, design, content, and branding belong to Journey Routers Pvt Ltd. You may not copy, resell, or replicate any part of the Service.</p>
+            <p>All code, design, content, and branding belong to Infinite Packages. You may not copy, resell, or replicate any part of the Service.</p>
           </section>
 
           <section>
@@ -63,17 +63,17 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-semibold mb-2">12. Contact</h2>
             <p>
-              Journey Routers Private Limited<br />
-              Khasra 275, 2nd Floor, Westend Marg, Saidulajab,<br />
-              Saket, New Delhi – 110030<br />
-              Phone: 9999935176<br />
-              Email: support@journeyrouters.com<br />
-              Website: www.journeyrouters.com
+              Infinite Packages<br />
+              Patna, Bihar<br />
+              {/* Saket, New Delhi – 110030<br /> */}
+              Phone: 9304247331<br />
+              Email: support@infinitepackages.com<br />
+              Website: www.infinitepackages.com
             </p>
           </section>
 
           <p className="pt-4 text-gray-400 text-xs">
-            For questions about these Terms, contact us at support@journeyrouters.com
+            For questions about these Terms, contact us at support@infinitepackages.com
           </p>
         </div>
     </div>

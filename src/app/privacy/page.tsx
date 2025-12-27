@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-lg font-semibold mb-2">5. Your Rights</h2>
-            <p>You may request to view, correct, delete, or export your data by contacting support@journeyrouters.com.</p>
+            <p>You may request to view, correct, delete, or export your data by contacting support@infinitepackages.com.</p>
           </section>
 
           <section>
@@ -41,15 +41,15 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-lg font-semibold mb-2">7. Contact</h2>
             <p>
-              Journey Routers Private Limited<br />
+              Infinite Packages<br />
               New Delhi, India<br />
               Phone: 9999935176<br />
-              Email: support@journeyrouters.com
+              Email: support@infinitepackages.com
             </p>
           </section>
 
           <p className="pt-4 text-gray-400 text-xs">
-            For privacy-related questions, contact us at support@journeyrouters.com
+            For privacy-related questions, contact us at support@infinitepackages.com
           </p>
         </div>
       </main>
