@@ -57,7 +57,7 @@ export default function PricingSection() {
             </div>
             <div className="p-8 flex-1 flex flex-col">
               <div className="mb-6">
-                <span className="text-5xl font-bold">₹99</span>
+                <span className="text-5xl font-bold">₹999</span>
                 <span className="text-gray-400 ml-2">/month</span>
               </div>
               <ul className="space-y-4 mb-8">
@@ -130,7 +130,7 @@ export default function PricingSection() {
             </div>
             <div className="p-8 flex-1 flex flex-col">
               <div className="mb-6">
-                <span className="text-5xl font-bold">₹1,149</span>
+                <span className="text-5xl font-bold">₹1,499</span>
                 <span className="text-gray-400 ml-2">/month</span>
               </div>
               <ul className="space-y-4 mb-8">
@@ -200,7 +200,7 @@ export default function PricingSection() {
             </div>
             <div className="p-8 flex-1 flex flex-col">
               <div className="mb-6">
-                <span className="text-5xl font-bold">₹1,399</span>
+                <span className="text-5xl font-bold">₹1,999</span>
                 <span className="text-gray-400 ml-2">/month</span>
               </div>
               <ul className="space-y-4 mb-8">
