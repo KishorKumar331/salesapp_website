@@ -19,7 +19,9 @@ export default function Home() {
         className="relative h-screen overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage:
-            "url(https://img1.wsimg.com/isteam/getty/2167583877/:/rs=w:3070,m)",
+            window.innerWidth > 468
+              ? "url(https://img1.wsimg.com/isteam/getty/2167583877/:/rs=w:3070,m)"
+              : "url(https://cdn.infinitepackages.com/webherobanner/ip-banner-mobile.png)",
           backgroundAttachment: "fixed",
         }}
       >
