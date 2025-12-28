@@ -18,11 +18,16 @@ export default function Home() {
       <section
         className="relative h-screen overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage:
-            window.innerWidth > 468
-              ? "url(https://img1.wsimg.com/isteam/getty/2167583877/:/rs=w:3070,m)"
-              : "url(https://cdn.infinitepackages.com/webherobanner/ip-banner-mobile.png)",
+          backgroundImage: "url(https://img1.wsimg.com/isteam/getty/2167583877/:/rs=w:3070,m)",
           backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+        data-mobile-image="https://cdn.infinitepackages.com/webherobanner/ip-banner-mobile.png"
+        ref={(el) => {
+          if (el && typeof window !== 'undefined' && window.innerWidth <= 468) {
+            el.style.backgroundImage = `url(${el.dataset.mobileImage})`;
+          }
         }}
       >
         {/* Overlay for better text readability */}
