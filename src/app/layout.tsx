@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Journey Routers - Travel Management Solution",
+  title: "Infinite Packages- Travel Management Solution",
   description: "Your complete travel management solution for seamless trip planning and booking.",
 };
 

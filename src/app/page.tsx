@@ -34,7 +34,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight text-white mb-8 drop-shadow-lg">
               {/* Build your travel business without quitting your job — all from
               your phone. */}
-              Grow Your Travel Business Without Quitting Your Job
+              {/* Grow Your Travel Business Without Quitting Your Job */}
             </h1>
           </div>
         </div>

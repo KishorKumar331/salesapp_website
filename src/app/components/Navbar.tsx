@@ -35,10 +35,12 @@ export default function Navbar() {
             }}
           >
             <img 
-              src="/finallogo.png" 
-              alt="Journey Routers" 
-              className="h-30 w-30 hover:opacity-90 transition-opacity"
+              src="/IP-logo.png" 
+              alt="I.P. Logo" 
+              className="h-15 w-30 hover:opacity-90 transition-opacity"
             />
+            <p className="ml-2 bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-400 to-yellow-300 font-semibold">Infinite</p>
+            <p className="ml-1 bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-blue-500 font-semibold">Packages</p>
           </Link>
           <nav className="hidden md:flex space-x-6">
             <Link 
