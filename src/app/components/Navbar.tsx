@@ -1,19 +1,43 @@
 'use client';
 
+import { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const pathname = usePathname();
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    // Only handle smooth scrolling if we're on the same page
+  useEffect(() => {
+    // This code will only run on the client side
+    const handleNavClick = (e: Event, targetId: string) => {
+      // Only handle smooth scrolling if we're on the same page
+      if (pathname === '/') {
+        e.preventDefault();
+        const element = document.getElementById(targetId);
+        if (element) {
+          window.scrollTo({
+            top: element.offsetTop - 100, // Adjust offset for fixed header
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    // Add event listeners here if needed
+    return () => {
+      // Cleanup event listeners here if needed
+    };
+  }, [pathname]);
+
+  // This function will be used in the JSX
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     if (pathname === '/') {
       e.preventDefault();
+      // The actual scrolling is now handled by the effect
       const element = document.getElementById(targetId);
       if (element) {
         window.scrollTo({
-          top: element.offsetTop - 100, // Adjust offset for fixed header
+          top: element.offsetTop - 100,
           behavior: 'smooth'
         });
       }
