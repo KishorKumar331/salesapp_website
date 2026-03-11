@@ -1,81 +1,93 @@
 export default function TermsPage() {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12 w-full">
-        <h1 className="text-3xl font-bold mb-6">Terms & Conditions</h1>
-        <p className="text-gray-400 text-sm mb-8">Last updated: November 2025</p>
-        
-        <div className="space-y-6 text-gray-300 text-sm leading-relaxed">
-          <section>
-            <h2 className="text-lg font-semibold mb-2">1. Use of the Service</h2>
-            <p>You must be at least 18 years old, provide accurate information, and use the Service only for lawful business purposes. Misuse, hacking, modification, or reverse engineering is prohibited. We may suspend or terminate accounts violating these rules.</p>
-          </section>
+    <div className="min-h-screen bg-[#f8fafd] text-gray-900 pb-12">
+      {/* Header Decoration */}
+      <div className="w-full h-48 bg-gradient-to-r from-[#0a192f] to-[#041422] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+      </div>
 
-          <section>
-            <h2 className="text-lg font-semibold mb-2">2. User Account</h2>
-            <p>You are responsible for maintaining the confidentiality of your login credentials and all activities under your account. We are not liable for any loss caused by unauthorized access due to user negligence.</p>
-          </section>
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 relative z-10">
+        <div className="bg-white rounded-2xl shadow-[0_8px_30px_-4px_rgba(0,140,255,0.1)] p-8 md:p-12 border border-blue-50">
+          <div className="border-b border-gray-100 pb-8 mb-8">
+            <h1 className="text-4xl font-sans font-black text-[#041422] mb-3">Terms & Conditions</h1>
+            <div className="w-16 h-1.5 bg-gradient-to-r from-[#d12a2f] to-[#e53935] rounded-full mb-4"></div>
+            <p className="text-gray-500 text-sm font-medium">Last updated: November 2025</p>
+          </div>
+          
+          <div className="space-y-8 text-gray-600 text-base font-medium leading-relaxed">
+            
+            <section className="bg-blue-50/50 p-6 rounded-xl border border-blue-100 mb-8">
+              <p className="text-[#041422] font-black mb-2">Important Notice for Travel Partners:</p>
+              <p className="text-sm">These terms govern your use of the Infinite Packages B2B platform. By acting as a travel agent, sub-agent, or affiliate utilizing our CRM and booking management tools, you agree strictly to the following B2B terms of service.</p>
+            </section>
 
-          <section>
-            <h2 className="text-lg font-semibold mb-2">3. Subscription, Billing & Payments</h2>
-            <p>Some features require a paid subscription or pay-per-use credits. Prices may change with prior notice. Payments are processed by third-party gateways like PayU. We do not store card or UPI details.</p>
-          </section>
+            <section>
+              <h2 className="text-xl font-bold text-[#008cff] mb-3 flex items-center">
+                <span className="bg-[#e5f3ff] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                B2B Agency & Relationship
+              </h2>
+              <p className="pl-11">Infinite Packages provides a B2B SaaS platform for travel management. We are a technology provider, not a principal travel supplier. Your relationship with us is strictly as an independent B2B partner. You are solely responsible for all interactions, commitments, pricing markups, and disclosures made to your end-customers.</p>
+            </section>
 
-          <section>
-            <h2 className="text-lg font-semibold mb-2">4. Generated Data (Quotes, Invoices, PDFs)</h2>
-            <p>The Service allows creation of quotations, itineraries, invoices, and client data. You are responsible for accuracy. We provide tools only—not legal or financial advice.</p>
-          </section>
+            <section>
+              <h2 className="text-xl font-bold text-[#008cff] mb-3 flex items-center">
+                <span className="bg-[#e5f3ff] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                Pricing, Markups & End-Customer Liability
+              </h2>
+              <p className="pl-11">You have full control over the markups added to net rates generated via our quotation system. You bear absolute liability for ensuring your pricing complies with local laws, tax regulations (including GST), and consumer protection laws. Infinite Packages is not liable for any disputes between you and your end-customer regarding pricing, quality of service, or unmet travel expectations.</p>
+            </section>
 
-          <section>
-            <h2 className="text-lg font-semibold mb-2">5. Acceptable Use Policy</h2>
-            <p>You agree not to upload harmful/illegal content, send spam, commit fraud, harass users, interfere with system operations, or attempt unauthorized access. Violations may result in termination.</p>
-          </section>
+            <section>
+              <h2 className="text-xl font-bold text-[#008cff] mb-3 flex items-center">
+                <span className="bg-[#e5f3ff] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+                Supplier Failures & API Discrepancies
+              </h2>
+              <p className="pl-11">Our platform may integrate with third-party aggregators (similar to TBO, Tripjack) or direct APIs. We cannot guarantee real-time absolute accuracy of third-party inventory or pricing until final confirmation. Infinite Packages holds no liability for bookings dropped due to supplier rejection, API timeouts, or unnotified inventory changes.</p>
+            </section>
 
-          <section>
-            <h2 className="text-lg font-semibold mb-2">6. Intellectual Property</h2>
-            <p>All code, design, content, and branding belong to Infinite Packages. You may not copy, resell, or replicate any part of the Service.</p>
-          </section>
+            <section>
+              <h2 className="text-xl font-bold text-[#008cff] mb-3 flex items-center">
+                <span className="bg-[#e5f3ff] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
+                Cancellations & Refunds Policy
+              </h2>
+              <p className="pl-11">Cancellations are strictly governed by the actual travel suppliers (Airlines, Hotels, DMCs). We only pass through the supplier&apos;s cancellation terms. Any platform usage fees or software subscription fees paid to Infinite Packages are non-refundable unless explicitly stated otherwise.</p>
+            </section>
 
-          <section>
-            <h2 className="text-lg font-semibold mb-2">7. Third-Party Services</h2>
-            <p>The app integrates with AWS, payment gateways, SMS/email providers, and travel data APIs. We are not responsible for failures or actions of third-party services.</p>
-          </section>
+            <section>
+              <h2 className="text-xl font-bold text-[#008cff] mb-3 flex items-center">
+                <span className="bg-[#e5f3ff] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">5</span>
+                Platform Availability & &quot;As-Is&quot; Provision
+              </h2>
+              <p className="pl-11">The Service is provided &quot;as is&quot; and &quot;as available&quot;. While we strive for 99.9% uptime, infinite Packages makes no warranty that the Android App, Web Dashboard, or quote generation features will be completely error-free or strictly continuous. We are not liable for business loss due to temporary technical downtime.</p>
+            </section>
 
-          <section>
-            <h2 className="text-lg font-semibold mb-2">8. Limitation of Liability</h2>
-            <p>We are not liable for business loss, data loss, downtime, incorrect data input, or indirect damages. Use the platform at your own risk.</p>
-          </section>
+            <section>
+              <h2 className="text-xl font-bold text-[#008cff] mb-3 flex items-center">
+                <span className="bg-[#e5f3ff] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">6</span>
+                Generated Data & Account Security
+              </h2>
+              <p className="pl-11">You are responsible for maintaining the confidentiality of your B2B login credentials. You are responsible for the accuracy of all invoices and PDF itineraries generated using our system. Misuse, scraping our technology, or sharing accounts across multiple un-licensed branch offices violates these terms.</p>
+            </section>
 
-          <section>
-            <h2 className="text-lg font-semibold mb-2">9. Data & Privacy</h2>
-            <p>Your personal data is processed according to our Privacy Policy, available in the app and on the website.</p>
-          </section>
+            <section className="bg-gray-50 rounded-xl p-6 border border-gray-100 mt-12">
+              <h2 className="text-xl font-bold text-[#041422] mb-4">Contact & Support</h2>
+              <div className="text-gray-600">
+                <p className="font-bold text-gray-900 mb-2">Infinite Packages</p>
+                <p>Patna, Bihar</p>
+                <p>Phone: 9304247331</p>
+                <p>Email: <a href="mailto:support@infinitepackages.com" className="text-[#008cff] hover:underline">support@infinitepackages.com</a></p>
+                <p>Website: www.infinitepackages.com</p>
+              </div>
+            </section>
 
-          <section>
-            <h2 className="text-lg font-semibold mb-2">10. Termination</h2>
-            <p>We may suspend or terminate your account for violations or misuse. You may request account deletion anytime.</p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold mb-2">11. Changes to Terms</h2>
-            <p>We may update these Terms periodically. Continued use means acceptance of updated Terms.</p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold mb-2">12. Contact</h2>
-            <p>
-              Infinite Packages<br />
-              Patna, Bihar<br />
-              {/* Saket, New Delhi – 110030<br /> */}
-              Phone: 9304247331<br />
-              Email: support@infinitepackages.com<br />
-              Website: www.infinitepackages.com
-            </p>
-          </section>
-
-          <p className="pt-4 text-gray-400 text-xs">
-            For questions about these Terms, contact us at support@infinitepackages.com
-          </p>
+            <div className="pt-8 mt-8 border-t border-gray-100 text-center">
+              <p className="text-gray-500 text-sm">
+                For questions about these Terms, contact us at <a href="mailto:support@infinitepackages.com" className="text-[#008cff] font-bold hover:underline">support@infinitepackages.com</a>
+              </p>
+            </div>
+          </div>
         </div>
+      </main>
     </div>
   );
 }

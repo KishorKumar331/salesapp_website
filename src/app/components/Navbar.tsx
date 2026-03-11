@@ -21,12 +21,12 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
-      <div className="mx-auto max-w-7xl px-4 py-3">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b border-gray-200 transition-all duration-300">
+      <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link 
             href="/" 
-            className="flex items-center"
+            className="flex items-center group"
             onClick={(e) => {
               if (pathname === '/') {
                 e.preventDefault();
@@ -37,36 +37,37 @@ export default function Navbar() {
             <img 
               src="/IP-logo.png" 
               alt="I.P. Logo" 
-              className="h-15 w-30 hover:opacity-90 transition-opacity"
+              className="h-10 w-auto group-hover:scale-105 transition-transform duration-300 mr-3 filter drop-shadow-sm"
             />
-            <p className="ml-2 bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-400 to-yellow-300 font-semibold">Infinite</p>
-            <p className="ml-1 bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-blue-500 font-semibold">Packages</p>
+            <div className="hidden sm:flex flex-col -space-y-1">
+              <span className="text-xl tracking-wide font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#008cff] to-[#0052cc]">Infinite</span>
+              <span className="text-sm font-semibold tracking-wide text-gray-600">Packages</span>
+            </div>
           </Link>
-          <nav className="hidden md:flex space-x-6">
-            <Link 
-              href="/" 
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+          <nav className="hidden md:flex items-center space-x-8">
+            {[
+              { name: 'Home', href: '/' },
+              { name: 'Pricing', href: '/pricing' },
+              { name: 'Privacy Policy', href: '/privacy' },
+              { name: 'Terms', href: '/terms' },
+            ].map((item) => (
+              <Link 
+                key={item.name}
+                href={item.href} 
+                className={`text-sm font-bold transition-all duration-200 hover:text-[#008cff] ${
+                  pathname === item.href ? 'text-[#008cff]' : 'text-gray-700'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+            
+            <a 
+              href="https://dashboard.infinitepackages.com/auth" 
+              className="ml-4 px-6 py-2.5 rounded-md bg-gradient-to-r from-[#008cff] to-[#0052cc] hover:from-[#0070cc] hover:to-[#0040a0] text-white text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg"
             >
-              Home
-            </Link>
-            <Link 
-              href="/pricing" 
-              className="text-gray-300 hover:text-white transition-colors font-medium"
-            >
-              Pricing
-            </Link>
-            <Link 
-              href="/privacy" 
-              className="text-gray-300 hover:text-white transition-colors font-medium"
-            >
-              Privacy Policy
-            </Link>
-            <Link 
-              href="/terms" 
-              className="text-gray-300 hover:text-white transition-colors font-medium"
-            >
-              Terms
-            </Link>
+              Get Started
+            </a>
           </nav>
         </div>
       </div>

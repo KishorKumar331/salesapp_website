@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen flex flex-col`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f4f4f4] text-gray-900 min-h-screen flex flex-col`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-grow overflow-auto">
