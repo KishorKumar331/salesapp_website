@@ -87,10 +87,10 @@ export default function Navbar() {
             ))}
             
             <a 
-              href="https://dashboard.infinitepackages.com/auth" 
+              href="https://dashboard.infinitepackages.com" 
               className="ml-4 px-6 py-2.5 rounded-md bg-gradient-to-r from-[#008cff] to-[#0052cc] hover:from-[#0070cc] hover:to-[#0040a0] text-white text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg"
             >
-              Get Started
+              Login
             </a>
           </nav>
         </div>
