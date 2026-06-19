@@ -55,79 +55,96 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
 
   return (
     <>
-      <div className="relative bg-[#041422] rounded-[2rem] p-8 lg:p-12 shadow-[0_30px_60px_-15px_rgba(14,59,52,0.4)] border border-[#0E3B34]/30 flex flex-col transform transition-transform duration-500 hover:-translate-y-2 lg:hover:translate-y-0">
-        <div className="mb-8 text-center border-b border-white/10 pb-8">
-          <div className="inline-flex items-center gap-2 bg-[#E0A23B]/20 text-[#E0A23B] px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase mb-6 border border-[#E0A23B]/30 shadow-sm">
+      {/* Horizontal Pricing Banner */}
+      <div className="relative bg-[#041422] rounded-[2rem] p-8 sm:p-10 shadow-[0_20px_45px_rgba(14,59,52,0.25)] border border-[#0E3B34]/30 flex flex-col md:flex-row md:items-center md:justify-between gap-6 overflow-hidden transform transition-transform duration-500 hover:-translate-y-1">
+        {/* Glow Effects */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#0E3B34]/15 rounded-full blur-[80px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#E0A23B]/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+        <div className="relative z-10 text-left flex-1">
+          <div className="inline-flex items-center gap-2 bg-[#E0A23B]/20 text-[#E0A23B] px-3 py-1 rounded-full text-[10px] font-black tracking-widest uppercase mb-3 border border-[#E0A23B]/30 shadow-sm">
              <Sparkles className="w-3 h-3 text-[#E0A23B]" /> The Only Plan You Need
           </div>
-          <h3 className="text-3xl font-black text-white tracking-widest uppercase mb-4">{plan.Name} Package</h3>
-          
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-6xl font-black text-white lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-[#E0A23B] lg:to-[#F1B855]">₹{plan.PricePaise / 100}</span>
-            <span className="text-blue-100/50 font-bold mt-4">/mo</span>
-          </div>
-          <p className="mt-4 text-blue-100/80 font-medium">{plan.Description}</p>
+          <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">{plan.Name} Package</h3>
+          <p className="text-sm text-blue-100/70 font-medium max-w-xl">{plan.Description}</p>
         </div>
-        
-        <button 
-          onClick={() => window.location.href='https://dashboard.infinitepackages.com'}
-          className="w-full bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black py-4 rounded-xl font-black text-lg transition-all duration-300 shadow-[0_10px_20px_rgba(224,162,59,0.3)] hover:shadow-[0_15px_30px_rgba(224,162,59,0.4)] mb-12 transform hover:-translate-y-0.5"
-        >
-          Get Started Now
-        </button>
 
-        <div className="flex-1 flex flex-col gap-10 sm:flex-row text-left">
+        <div className="relative z-10 flex flex-col sm:flex-row items-center gap-6 min-w-[280px] justify-end">
+          <div className="text-center sm:text-right">
+            <div className="flex items-baseline justify-center sm:justify-end gap-1">
+              <span className="text-4xl sm:text-5xl font-black text-[#E0A23B]">₹{plan.PricePaise / 100}</span>
+              <span className="text-blue-100/50 font-bold text-sm">/month</span>
+            </div>
+            <span className="text-[10px] font-bold text-emerald-400 block mt-1">All features & destinations</span>
+          </div>
+
+          <button 
+            onClick={() => window.location.href='https://dashboard.infinitepackages.com'}
+            className="w-full sm:w-auto bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black px-8 py-3.5 rounded-xl font-black text-base transition-all duration-300 shadow-[0_10px_20px_rgba(224,162,59,0.25)] whitespace-nowrap transform hover:-translate-y-0.5"
+          >
+            Get Started Now
+          </button>
+        </div>
+      </div>
+
+      {/* Pricing Details Block (Included & Supported Destinations) */}
+      <div className="mt-6 bg-gray-50 border border-gray-200/60 rounded-[2rem] p-6 sm:p-8 shadow-sm">
+        <div className="grid sm:grid-cols-2 gap-8 text-left">
           {/* Features Column */}
-          <div className="flex-1">
-            <p className="text-xs font-black text-blue-100/50 tracking-widest uppercase mb-4">What's Included</p>
-            <ul className="space-y-4">
+          <div>
+            <p className="text-xs font-black text-gray-400 tracking-widest uppercase mb-4">What's Included</p>
+            <ul className="space-y-3.5">
               {['Unlimited Quotations', 'All Destinations Unlocked', 'Android App Access', 'Pro PDF Generator', 'Live Payment Tracking'].map((feature, i) => (
                 <li key={i} className="flex items-start">
-                  <div className="bg-[#0E3B34]/20 rounded-full p-0.5 mr-3 mt-0.5 border border-[#0E3B34]/30 flex-shrink-0">
-                    <Check className="w-4 h-4 text-[#E0A23B]" strokeWidth={4} />
+                  <div className="bg-[#0E3B34]/10 rounded-full p-0.5 mr-3 mt-0.5 border border-[#0E3B34]/15 flex-shrink-0">
+                    <Check className="w-3.5 h-3.5 text-[#0E3B34]" strokeWidth={4} />
                   </div>
-                  <span className="text-white font-bold text-sm leading-relaxed">{feature}</span>
+                  <span className="text-gray-700 font-bold text-sm leading-relaxed">{feature}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Destinations Column */}
-          <div className="flex-1">
-            <p className="text-xs font-black text-blue-100/50 tracking-widest uppercase mb-4">Supported Destinations</p>
+          <div className="border-t sm:border-t-0 sm:border-l border-gray-200/80 pt-6 sm:pt-0 sm:pl-8">
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <p className="text-xs font-black text-gray-400 tracking-widest uppercase">Supported Destinations</p>
+              <span className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 border border-emerald-100 text-[9px] font-bold px-2 py-0.5 rounded-full animate-pulse">
+                + Adding more daily
+              </span>
+            </div>
             
-            <h4 className="flex items-center gap-2 text-[10px] font-black text-blue-100/40 uppercase tracking-widest mb-3">
-              <MapPin className="w-3 h-3" /> Domestic
+            <h4 className="flex items-center gap-1.5 text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2.5">
+              <MapPin className="w-3 h-3 text-[#0E3B34]" /> Domestic
             </h4>
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex flex-wrap gap-1.5 mb-4">
               {plan.Destination.Domestic.slice(0, showMoreDomestic ? undefined : 4).map((dest, idx) => (
-                <span key={idx} className="px-2 py-1 bg-white/5 border border-white/10 text-white rounded text-xs font-bold shadow-sm backdrop-blur-sm">
+                <span key={idx} className="px-2.5 py-1 bg-white border border-gray-200/80 text-gray-700 rounded text-xs font-bold shadow-sm">
                   {dest}
                 </span>
               ))}
               {!showMoreDomestic && plan.Destination.Domestic.length > 4 && (
-                <button onClick={() => setShowMoreDomestic(true)} className="text-[#E0A23B] text-[10px] font-black flex items-center hover:text-white transition-colors">
+                <button onClick={() => setShowMoreDomestic(true)} className="text-[#0E3B34] text-[10px] font-black flex items-center hover:underline">
                   +{plan.Destination.Domestic.length - 4} More <ChevronDown className="w-3 h-3 ml-0.5" />
                 </button>
               )}
             </div>
 
-            <h4 className="flex items-center gap-2 text-[10px] font-black text-blue-100/40 uppercase tracking-widest mb-3">
-              <Globe className="w-3 h-3" /> International
+            <h4 className="flex items-center gap-1.5 text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2.5">
+              <Globe className="w-3 h-3 text-[#0E3B34]" /> International
             </h4>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5">
               {plan.Destination.International.slice(0, showMoreIntl ? undefined : 6).map((dest, idx) => (
-                <span key={idx} className="px-2 py-1 bg-white/5 border border-white/10 text-white rounded text-xs font-bold shadow-sm backdrop-blur-sm">
+                <span key={idx} className="px-2.5 py-1 bg-white border border-gray-200/80 text-gray-700 rounded text-xs font-bold shadow-sm">
                   {dest}
                 </span>
               ))}
               {!showMoreIntl && plan.Destination.International.length > 6 && (
-                <button onClick={() => setShowMoreIntl(true)} className="text-[#E0A23B] text-[10px] font-black flex items-center hover:text-white transition-colors">
+                <button onClick={() => setShowMoreIntl(true)} className="text-[#0E3B34] text-[10px] font-black flex items-center hover:underline">
                   +{plan.Destination.International.length - 6} More <ChevronDown className="w-3 h-3 ml-0.5" />
                 </button>
               )}
             </div>
-
           </div>
         </div>
       </div>

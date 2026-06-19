@@ -118,7 +118,7 @@ export default function Navbar() {
               href="https://dashboard.infinitepackages.com" 
               className="ml-4 px-6 py-2.5 rounded-md bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] hover:from-[#1C6C5E] hover:to-[#0E3B34] text-white text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg"
             >
-              Login
+              Start Now
             </a>
           </nav>
         </div>

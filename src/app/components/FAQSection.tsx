@@ -6,43 +6,38 @@ import { ChevronDown, MessageCircle } from 'lucide-react';
 const faqs = [
   {
     category: "Legal",
-    question: "Do I need to register a company or have GST to start?",
-    answer: "No. You can start using Infinite Packages today — no company registration, no GST, no paperwork needed. Many of our users start while still working at their current agency. When you're ready to formalise your business later, our dashboard includes a step-by-step guide covering GST registration, Udyam registration, and business bank account setup. But none of that is needed to send your first quote."
+    question: "Do I need GST or company registration to start?",
+    answer: "No. You don't need GST, company registration, or any paperwork to start and test your confidence. Build your business first, handle legalities later."
   },
   {
-    category: "Privacy",
-    question: "Can I use this while still working at my current agency?",
-    answer: "Absolutely. Your dashboard is 100% private. There's no public listing, no website with your name, nothing your employer or colleagues can find. The Android app lets you quote clients in less than a minute — during a lunch break, after work hours, or on a weekend. Many of our users started exactly this way: testing the waters quietly before going full-time. Your data, your clients, your business — visible only to you."
-  },
-  {
-    category: "Skill Gap",
-    question: "I've never built a package from scratch. I only sold pre-made packages at my agency. Can I still use this?",
-    answer: "Yes — that's exactly who this is built for. Our quoting engine walks you through every step: select destination, add hotel details, set inclusions and exclusions, add flights, set your margin. You don't need to be a package designer. You fill in the fields — we make it look professional."
-  },
-  {
-    category: "Trust",
-    question: "Will my clients trust a quote from a solo agent? I don't have a brand name or website.",
-    answer: "Your clients never see \"solo agent.\" They see a beautifully formatted PDF with destination details, hotel information, day-wise itinerary, inclusions, exclusions, and professional payment terms. With our premium design marketplace (₹1,499 one-time), you can add your own logo, brand colours, and custom header. Your client receives a package that looks like it came from a 50-person agency. The quote IS your brand. You don't need a website — you need a quote that closes."
+    category: "Setup",
+    question: "Do I need a physical office?",
+    answer: "No. It is just you and your mobile phone—that is your complete office. Operate from anywhere, anytime."
   },
   {
     category: "Technical",
-    question: "What about flight bookings? Don't I need IATA or GDS access?",
-    answer: "You don't need IATA certification to sell travel packages. For flights, use B2B portals like TBO, TripJack, or Via.com — they give any registered travel professional access to live flight inventory at agent rates. For hotels, connect with DMCs and B2B hotel suppliers for contract rates. Many successful independent agents operate this way without GDS access. Infinite Packages helps you build and quote the complete package — you book the individual components through your preferred suppliers."
+    question: "Is the platform too technical to use?",
+    answer: "No. Everything is designed in layman's terms. You only need 5 to 7 clicks to generate a professional 4-night package for any destination."
   },
   {
-    category: "Operations",
-    question: "How does payment tracking work? My clients always pay in instalments.",
-    answer: "We built the Payment Tracker specifically for this. When you convert a lead, set up the full payment schedule: advance amount, second instalment, final payment — each with a due date. The system shows you exactly what's been received, what's pending, and what's due today. For safety and accounting control, payment status updates and confirmations are restricted to administrator access only. No more scrolling through WhatsApp chats trying to remember who paid ₹15,000 and who still owes ₹30,000."
+    category: "Destinations",
+    question: "What if my destination is not in the dashboard?",
+    answer: "We are on a mission to onboard all tourist destinations. If the system is missing something, write to us and we will deploy it on the very same day."
   },
   {
-    category: "Overwhelm",
-    question: "I don't have a website or online presence. Don't I need one to get clients?",
-    answer: "You don't need any of that to start. Your first 10 clients are already in your phone contacts — friends, family, colleagues, and their referrals. Open the app, build a quote, WhatsApp it to them. That's it. No website needed. No Instagram page needed. No Google listing needed. Infinite Packages + your phone + your existing contacts = you're ready to earn. Build the online presence later, once the money is already coming in."
+    category: "Website",
+    question: "Only a dashboard is not enough, I need a website to impress my clients?",
+    answer: "Do not worry. We reach out to every business for a website. We discuss, build, and deploy your custom website in a maximum of 2 days."
   },
   {
-    category: "Comparison",
-    question: "How is this different from helloGTX, LeadSquared, or just using Excel?",
-    answer: "Generic CRMs track leads. Infinite Packages creates quotes. That's the difference. Our quoting engine generates professional multi-destination package PDFs — with land, hotel, inclusions, exclusions, and flights — in less than a minute from your phone. Then you can share it with your client, track their payments in instalments, and manage bookings. Excel can't generate a professional PDF instantly. LeadSquared doesn't build travel packages. helloGTX doesn't let you quote from your phone in less than a minute. This is the one tool that does what a travel salesperson actually needs — quote, track, get paid."
+    category: "Team",
+    question: "Can I manage my team in the dashboard?",
+    answer: "Yes. Add your member, share them leads, and maintain full control over team members."
+  },
+  {
+    category: "Privacy",
+    question: "Will my employer or friends find out that I am using this platform?",
+    answer: "No. No one can ever get this information unless you explicitly choose to share it yourself. Your account is 100% private."
   }
 ];
 
@@ -78,7 +73,7 @@ export default function FAQSection() {
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
               >
                 <div className="flex items-center gap-4 pr-4">
-                  <span className="text-xs font-black text-gray-400 uppercase tracking-widest hidden sm:block w-20">
+                  <span className="text-xs font-black text-gray-400 uppercase tracking-widest hidden sm:block w-28 flex-shrink-0">
                     {faq.category}
                   </span>
                   <span className={`font-bold text-gray-900 leading-snug ${openIndex === index ? 'text-[#0E3B34]' : ''}`}>

@@ -5,6 +5,7 @@ import { Check, X, Loader2, LayoutDashboard, Briefcase, FileText, Users, Setting
 
 import FeaturesSection from "./components/FeaturesSection";
 import ProblemSection from "./components/ProblemSection";
+import ProfitCalculator from "./components/ProfitCalculator";
 import HowToUseSection from "./components/HowToUseSection";
 import StoryCarousel from "./components/StoryCarousel";
 import AppDownloadSection from "./components/AppDownloadSection";
@@ -91,15 +92,57 @@ export default function Home() {
       </section>
 
       <ProblemSection />
+      <ProfitCalculator />
       <FeaturesSection />
       <HowToUseSection />
       
-      {/* Design Marketplace Anchor Setup per Week 2 tasks */}
-      <section id="marketplace" className="bg-[#f8fafd] pt-6 pb-12 text-center border-y border-gray-100">
-         <div className="mx-auto max-w-3xl px-4">
-            <h2 className="text-3xl font-black text-gray-900 mb-4">Design Marketplace</h2>
-            <p className="text-gray-500 font-medium mb-6">Access premium, white-labeled PDF package design themes to separate your quotes from the rest.</p>
-            <button className="bg-white border-2 border-gray-200 text-gray-900 font-bold px-8 py-3 rounded-xl shadow-sm hover:border-[#E0A23B] transition-colors">Explore Themes (₹1,499 one-time)</button>
+      {/* Custom PDF Design Section */}
+      <section id="marketplace" className="bg-[#f8fafd] pt-10 pb-12 text-center border-y border-gray-100">
+         <div className="mx-auto max-w-4xl px-4">
+            <div className="inline-flex items-center gap-2 bg-[#0E3B34]/10 text-[#0E3B34] px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase mb-4">
+               PDF Customization
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-sans font-black text-gray-900 mb-4">
+               Create Your Own PDF Design
+            </h2>
+            <p className="text-gray-600 font-medium mb-8 max-w-2xl mx-auto">
+               Design a professional itinerary layout tailored exactly to your brand's style. Control every aspect of your PDF quotes based on your business requirements.
+            </p>
+
+            {/* Customization Options */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8 text-left">
+              {[
+                { title: "Decide Page Length", desc: "Select custom pages or single-page summaries." },
+                { title: "Content Placing", desc: "Drag and drop itinerary items, hotels, and images." },
+                { title: "Action Buttons", desc: "Embed payment links and direct booking buttons." },
+                { title: "Tailored to You", desc: "Customized according to your exact requirements." }
+              ].map((opt, idx) => (
+                <div key={idx} className="bg-white border border-gray-100 p-4 rounded-2xl shadow-sm">
+                  <div className="w-8 h-8 bg-[#0E3B34]/10 text-[#0E3B34] rounded-lg flex items-center justify-center font-bold text-sm mb-3">
+                    ✓
+                  </div>
+                  <h4 className="font-bold text-gray-900 text-sm mb-1">{opt.title}</h4>
+                  <p className="text-gray-400 text-[10px] leading-normal font-medium">{opt.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Pricing Offer */}
+            <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-white border border-gray-200/60 px-6 py-4 rounded-3xl shadow-sm">
+              <div className="text-center sm:text-left">
+                <span className="text-xs text-gray-400 font-bold block">Exclusive Layout Access</span>
+                <div className="flex items-center gap-2 mt-0.5">
+                  <span className="line-through text-gray-400 text-sm font-bold">₹2,499</span>
+                  <span className="text-xl font-black text-[#E0A23B]">₹999 + taxes only</span>
+                </div>
+              </div>
+              <button 
+                onClick={() => window.location.href='mailto:tech.support@infinitepackages.com?subject=Custom PDF Design Layout Inquiry'}
+                className="bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black px-8 py-3 rounded-xl font-black text-sm transition-all shadow-[0_5px_15px_rgba(224,162,59,0.2)] hover:shadow-[0_8px_20px_rgba(224,162,59,0.3)] transform hover:-translate-y-0.5"
+              >
+                Customize Layout
+              </button>
+            </div>
          </div>
       </section>
 

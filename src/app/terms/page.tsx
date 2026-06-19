@@ -73,8 +73,7 @@ export default function TermsPage() {
               <h2 className="text-xl font-bold text-[#041422] mb-4">Contact & Support</h2>
               <div className="text-gray-600">
                 <p className="font-bold text-gray-900 mb-2">Infinite Packages</p>
-                <p>Patna, Bihar</p>
-                <p>Phone: 9304247331</p>
+                <p>Phone: 8882414703</p>
                 <p>Email: <a href="mailto:support@infinitepackages.com" className="text-[#0E3B34] hover:underline">support@infinitepackages.com</a></p>
                 <p>Website: www.infinitepackages.com</p>
               </div>

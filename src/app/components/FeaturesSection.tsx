@@ -54,13 +54,7 @@ export default function FeaturesSection() {
                 <p className="text-gray-500 font-medium leading-relaxed mb-6">
                   {feature.description}
                 </p>
-                {/* Placeholder for screenshot */}
-                <div className="w-full h-32 bg-gray-100 rounded-xl overflow-hidden relative border border-gray-200">
-                   <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-gray-400 uppercase tracking-widest">
-                      Screenshot
-                   </div>
-                   {/* In real deployment, replace with <img src={feature.screenshot} /> */}
-                </div>
+
               </div>
             );
           })}
