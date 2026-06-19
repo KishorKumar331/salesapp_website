@@ -12,12 +12,12 @@ const faqs = [
   {
     category: "Privacy",
     question: "Can I use this while still working at my current agency?",
-    answer: "Absolutely. Your dashboard is 100% private. There's no public listing, no website with your name, nothing your employer or colleagues can find. The Android app lets you quote clients in under 3 minutes — during a lunch break, after work hours, or on a weekend. Many of our users started exactly this way: testing the waters quietly before going full-time. Your data, your clients, your business — visible only to you."
+    answer: "Absolutely. Your dashboard is 100% private. There's no public listing, no website with your name, nothing your employer or colleagues can find. The Android app lets you quote clients in less than a minute — during a lunch break, after work hours, or on a weekend. Many of our users started exactly this way: testing the waters quietly before going full-time. Your data, your clients, your business — visible only to you."
   },
   {
     category: "Skill Gap",
     question: "I've never built a package from scratch. I only sold pre-made packages at my agency. Can I still use this?",
-    answer: "Yes — that's exactly who this is built for. Our quoting engine walks you through every step: select destination, add hotel details, set inclusions and exclusions, add flights, set your margin. We also provide pre-loaded route templates for popular destinations — Goa 3N, Rajasthan 5N, Kerala 4N, Himachal 4N — with sample costings and suggested margin percentages. You don't need to be a package designer. You fill in the fields — we make it look professional."
+    answer: "Yes — that's exactly who this is built for. Our quoting engine walks you through every step: select destination, add hotel details, set inclusions and exclusions, add flights, set your margin. You don't need to be a package designer. You fill in the fields — we make it look professional."
   },
   {
     category: "Trust",
@@ -32,7 +32,7 @@ const faqs = [
   {
     category: "Operations",
     question: "How does payment tracking work? My clients always pay in instalments.",
-    answer: "We built the Payment Tracker specifically for this. When you convert a lead, set up the full payment schedule: advance amount, second instalment, final payment — each with a due date. The system shows you exactly what's been received, what's pending, and what's due today. Filter by date range to see how much money is coming in this week or this month. No more scrolling through WhatsApp chats trying to remember who paid ₹15,000 and who still owes ₹30,000."
+    answer: "We built the Payment Tracker specifically for this. When you convert a lead, set up the full payment schedule: advance amount, second instalment, final payment — each with a due date. The system shows you exactly what's been received, what's pending, and what's due today. For safety and accounting control, payment status updates and confirmations are restricted to administrator access only. No more scrolling through WhatsApp chats trying to remember who paid ₹15,000 and who still owes ₹30,000."
   },
   {
     category: "Overwhelm",
@@ -42,7 +42,7 @@ const faqs = [
   {
     category: "Comparison",
     question: "How is this different from helloGTX, LeadSquared, or just using Excel?",
-    answer: "Generic CRMs track leads. Infinite Packages creates quotes. That's the difference. Our quoting engine generates professional multi-destination package PDFs — with land, hotel, inclusions, exclusions, and flights — in under 3 minutes from your phone. Then it auto-emails the complete package to your client, tracks their payments in instalments, and lets you manage a growing team. Excel can't auto-email a professional PDF. LeadSquared doesn't build travel packages. helloGTX doesn't let you quote from your phone in 3 minutes. This is the one tool that does what a travel salesperson actually needs — quote, send, track, get paid."
+    answer: "Generic CRMs track leads. Infinite Packages creates quotes. That's the difference. Our quoting engine generates professional multi-destination package PDFs — with land, hotel, inclusions, exclusions, and flights — in less than a minute from your phone. Then you can share it with your client, track their payments in instalments, and manage bookings. Excel can't generate a professional PDF instantly. LeadSquared doesn't build travel packages. helloGTX doesn't let you quote from your phone in less than a minute. This is the one tool that does what a travel salesperson actually needs — quote, track, get paid."
   }
 ];
 

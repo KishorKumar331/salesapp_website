@@ -1,11 +1,26 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [bannerIndex, setBannerIndex] = useState(0);
+
+  const bannerMessages = [
+    "Journey to Ownership: Stop building someone else's equity.",
+    "Less than 1-minute quoting: Sell professional packages instantly.",
+    "Secure CRM: Confirm payments only by administrator access.",
+    "Start your travel agency on the side today."
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBannerIndex((prev) => (prev + 1) % bannerMessages.length);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     // This code will only run on the client side
@@ -46,6 +61,19 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b border-gray-200 transition-all duration-300">
+      {/* Top Rotating Announcement Banner */}
+      <div className="bg-[#0E3B34] text-white text-center py-2 px-4 text-xs font-bold tracking-wide transition-all duration-500 ease-in-out relative h-9 overflow-hidden flex items-center justify-center border-b border-[#0E3B34]/20">
+        {bannerMessages.map((msg, idx) => (
+          <span 
+            key={idx}
+            className={`absolute transition-all duration-500 ease-in-out ${
+              bannerIndex === idx ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+            }`}
+          >
+            {msg}
+          </span>
+        ))}
+      </div>
       <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link 

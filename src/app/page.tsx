@@ -60,11 +60,11 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0E3B34] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#0E3B34]"></span>
               </span>
-              Build your travel startup for pennies
+              Journey to Ownership
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-sans font-black leading-tight text-gray-900 mb-6 tracking-tight max-w-5xl mx-auto">
-              Build a Travel Business of Your Own — <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Without Leaving Your Job</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-black leading-tight text-gray-900 mb-6 tracking-tight max-w-5xl mx-auto">
+              "The voice that pitches for them can <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">build a brand of your own.</span>"
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-medium mb-10 leading-relaxed">

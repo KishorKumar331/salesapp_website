@@ -50,7 +50,7 @@ export default function AppDownloadSection() {
             </h2>
             <p className="text-blue-100/80 text-lg font-medium mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Quote clients from anywhere. Our purpose-built Android app lets you generate 
-              professional multi-destination packages in under 3 minutes flat, straight from your 
+              professional multi-destination packages in less than a minute, straight from your 
               phone during a lunch break, commute, or on the weekend.
             </p>
             

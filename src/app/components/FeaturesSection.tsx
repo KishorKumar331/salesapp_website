@@ -1,6 +1,6 @@
 'use client';
 
-import { FileText, Clock, CreditCard, LayoutTemplate, Users, Send } from 'lucide-react';
+import { FileText, Clock, CreditCard } from 'lucide-react';
 
 const featuresJSON = [
   {
@@ -12,38 +12,17 @@ const featuresJSON = [
   },
   {
     icon: Clock,
-    title: "3-Minute Quoting Engine",
-    description: "Build a complete package with flights, hotels, and land costs simply using your mobile phone during a lunch break.",
+    title: "Less than 1-Minute Quoting",
+    description: "Build and price a complete package with flights, hotels, and land costs simply using your mobile phone in less than a minute.",
     color: "text-[#E0A23B]",
     bg: "bg-[#E0A23B]/10"
   },
   {
     icon: CreditCard,
-    title: "Integrated Payment Tracker",
-    description: "Never lose track of an instalment. See exactly what's paid, pending, and overdue at a quick glance.",
+    title: "Secure Payment Tracker",
+    description: "Never lose track of an instalment. See exactly what's paid, pending, and overdue. Payment status can only be confirmed by admin access for security.",
     color: "text-[#00ab6b]",
     bg: "bg-[#00ab6b]/10"
-  },
-  {
-    icon: LayoutTemplate,
-    title: "Pre-built Route Templates",
-    description: "Access high-converting templates for Goa, Kerala, Maldives, and more with pre-filled margins and hotel logic.",
-    color: "text-[#ffbd2e]",
-    bg: "bg-[#ffbd2e]/10"
-  },
-  {
-    icon: Users,
-    title: "Built-in Light CRM",
-    description: "Keep all your leads, contacts, and historical quotes organized without needing a confusing 3rd party tool.",
-    color: "text-[#8b5cf6]",
-    bg: "bg-[#8b5cf6]/10"
-  },
-  {
-    icon: Send,
-    title: "Auto-Email & WhatsApp",
-    description: "Send out your PDF quotes automatically to client emails or generate instant WhatsApp sharing links.",
-    color: "text-[#ec4899]",
-    bg: "bg-[#ec4899]/10"
   }
 ];
 

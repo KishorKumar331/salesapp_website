@@ -35,9 +35,12 @@ export default function TestimonialsSection() {
       
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white border border-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-bold tracking-wide mb-6 shadow-sm">
-            <Star className="w-4 h-4 text-[#ffbd2e] fill-current" />
-            Loved by 500+ Solo Agents
+          <div className="inline-flex items-center gap-2 bg-[#0E3B34]/5 border border-[#0E3B34]/15 text-[#0E3B34] px-4 py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide mb-6 shadow-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E0A23B] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E0A23B]"></span>
+            </span>
+            100% Private & Secure &bull; We never share your data with anyone
           </div>
           <h2 className="text-4xl md:text-5xl font-sans font-black text-gray-900 mb-6 tracking-tight">
             Don't just take <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">our word for it</span>
