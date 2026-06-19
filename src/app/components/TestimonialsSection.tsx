@@ -8,14 +8,14 @@ const testimonials = [
     role: "Former Agency Sales Executive, Now Solo Founders",
     content: "I was scared to leave my agency job because I didn't know how to create the actual PDFs. I used to just sell what was on the brochure. Infinite Packages made me look like I had a 10-person design team from day one. I closed my first Maldives package within my first week.",
     initials: "RS",
-    color: "from-[#008cff] to-[#00cefc]"
+    color: "from-[#0E3B34] to-[#1C6C5E]"
   },
   {
     name: "Priya Desai",
     role: "Independent Travel Consultant",
     content: "I tried tracking payments in Excel but it was a nightmare with clients paying in 3 different instalments. The payment tracker alone is worth the ₹1,999. Now I just open my phone and see exactly who owes me what. The automated WhatsApp follow-ups changed my life.",
     initials: "PD",
-    color: "from-[#d12a2f] to-[#e53935]"
+    color: "from-[#E0A23B] to-[#F1B855]"
   },
   {
     name: "Vikram Reddy",
@@ -28,10 +28,10 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 bg-[#f8fafd] relative overflow-hidden">
+    <section className="py-12 bg-[#f8fafd] relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#008cff]/5 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#d12a2f]/5 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#0E3B34]/5 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#E0A23B]/5 rounded-full blur-[100px] pointer-events-none"></div>
       
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
             Loved by 500+ Solo Agents
           </div>
           <h2 className="text-4xl md:text-5xl font-sans font-black text-gray-900 mb-6 tracking-tight">
-            Don't just take <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008cff] to-[#00cefc]">our word for it</span>
+            Don't just take <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">our word for it</span>
           </h2>
         </div>
 
@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
               key={index} 
               className="bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 hover:-translate-y-2 transition-transform duration-300 relative group"
             >
-              <div className="absolute top-8 right-8 opacity-5 text-[#008cff] group-hover:opacity-10 transition-opacity">
+              <div className="absolute top-8 right-8 opacity-5 text-[#0E3B34] group-hover:opacity-10 transition-opacity">
                 <Quote size={64} />
               </div>
               

@@ -55,15 +55,15 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
 
   return (
     <>
-      <div className="relative bg-[#041422] rounded-[2rem] p-8 lg:p-12 shadow-[0_30px_60px_-15px_rgba(0,140,255,0.4)] border border-[#008cff]/30 flex flex-col transform transition-transform duration-500 hover:-translate-y-2 lg:hover:translate-y-0">
+      <div className="relative bg-[#041422] rounded-[2rem] p-8 lg:p-12 shadow-[0_30px_60px_-15px_rgba(14,59,52,0.4)] border border-[#0E3B34]/30 flex flex-col transform transition-transform duration-500 hover:-translate-y-2 lg:hover:translate-y-0">
         <div className="mb-8 text-center border-b border-white/10 pb-8">
-          <div className="inline-flex items-center gap-2 bg-[#008cff]/20 text-[#00cefc] px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase mb-6 border border-[#008cff]/30 shadow-sm">
-             <Sparkles className="w-3 h-3 text-[#00cefc]" /> The Only Plan You Need
+          <div className="inline-flex items-center gap-2 bg-[#E0A23B]/20 text-[#E0A23B] px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase mb-6 border border-[#E0A23B]/30 shadow-sm">
+             <Sparkles className="w-3 h-3 text-[#E0A23B]" /> The Only Plan You Need
           </div>
           <h3 className="text-3xl font-black text-white tracking-widest uppercase mb-4">{plan.Name} Package</h3>
           
           <div className="flex items-center justify-center gap-2">
-            <span className="text-6xl font-black text-white lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-[#008cff] lg:to-[#00cefc]">₹{plan.PricePaise / 100}</span>
+            <span className="text-6xl font-black text-white lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-[#E0A23B] lg:to-[#F1B855]">₹{plan.PricePaise / 100}</span>
             <span className="text-blue-100/50 font-bold mt-4">/mo</span>
           </div>
           <p className="mt-4 text-blue-100/80 font-medium">{plan.Description}</p>
@@ -71,7 +71,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
         
         <button 
           onClick={() => window.location.href='https://dashboard.infinitepackages.com'}
-          className="w-full bg-gradient-to-r from-[#008cff] to-[#00cefc] hover:from-[#0070cc] hover:to-[#00a3cc] text-white py-4 rounded-xl font-black text-lg transition-all duration-300 shadow-[0_10px_20px_rgba(0,140,255,0.3)] hover:shadow-[0_15px_30px_rgba(0,140,255,0.4)] mb-12 transform hover:-translate-y-0.5"
+          className="w-full bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black py-4 rounded-xl font-black text-lg transition-all duration-300 shadow-[0_10px_20px_rgba(224,162,59,0.3)] hover:shadow-[0_15px_30px_rgba(224,162,59,0.4)] mb-12 transform hover:-translate-y-0.5"
         >
           Get Started Now
         </button>
@@ -83,8 +83,8 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
             <ul className="space-y-4">
               {['Unlimited Quotations', 'All Destinations Unlocked', 'Android App Access', 'Pro PDF Generator', 'Live Payment Tracking'].map((feature, i) => (
                 <li key={i} className="flex items-start">
-                  <div className="bg-[#008cff]/20 rounded-full p-0.5 mr-3 mt-0.5 border border-[#008cff]/30 flex-shrink-0">
-                    <Check className="w-4 h-4 text-[#00cefc]" strokeWidth={4} />
+                  <div className="bg-[#0E3B34]/20 rounded-full p-0.5 mr-3 mt-0.5 border border-[#0E3B34]/30 flex-shrink-0">
+                    <Check className="w-4 h-4 text-[#E0A23B]" strokeWidth={4} />
                   </div>
                   <span className="text-white font-bold text-sm leading-relaxed">{feature}</span>
                 </li>
@@ -106,7 +106,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
                 </span>
               ))}
               {!showMoreDomestic && plan.Destination.Domestic.length > 4 && (
-                <button onClick={() => setShowMoreDomestic(true)} className="text-[#00cefc] text-[10px] font-black flex items-center hover:text-white transition-colors">
+                <button onClick={() => setShowMoreDomestic(true)} className="text-[#E0A23B] text-[10px] font-black flex items-center hover:text-white transition-colors">
                   +{plan.Destination.Domestic.length - 4} More <ChevronDown className="w-3 h-3 ml-0.5" />
                 </button>
               )}
@@ -122,7 +122,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
                 </span>
               ))}
               {!showMoreIntl && plan.Destination.International.length > 6 && (
-                <button onClick={() => setShowMoreIntl(true)} className="text-[#00cefc] text-[10px] font-black flex items-center hover:text-white transition-colors">
+                <button onClick={() => setShowMoreIntl(true)} className="text-[#E0A23B] text-[10px] font-black flex items-center hover:text-white transition-colors">
                   +{plan.Destination.International.length - 6} More <ChevronDown className="w-3 h-3 ml-0.5" />
                 </button>
               )}
@@ -138,7 +138,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
         <p className="text-gray-600 font-medium mb-8">We're here to help you get started with the new unified plan.</p>
         <button 
           onClick={() => setIsSupportModalOpen(true)}
-          className="bg-white border-2 border-gray-200 text-gray-800 hover:border-[#008cff] hover:text-[#008cff] font-black py-3 px-8 rounded-full transition-colors shadow-sm"
+          className="bg-white border-2 border-gray-200 text-gray-800 hover:border-[#E0A23B] hover:text-[#0E3B34] font-black py-3 px-8 rounded-full transition-colors shadow-sm"
         >
           Talk to Support
         </button>
@@ -153,7 +153,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
           ></div>
           
           <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden transform transition-all animate-in fade-in zoom-in-95 duration-200">
-            <div className="bg-gradient-to-r from-[#008cff] to-[#00cefc] p-6 text-white relative">
+            <div className="bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] p-6 text-white relative">
               <button 
                 onClick={closeModal}
                 className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors p-1"
@@ -161,7 +161,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
                 <X className="w-5 h-5" />
               </button>
               <h3 className="text-2xl font-black tracking-tight mb-1">How can we help?</h3>
-              <p className="text-blue-50 text-sm font-medium opacity-90">Let us know your requirements and we'll get right back to you.</p>
+              <p className="text-emerald-50 text-sm font-medium opacity-90">Let us know your requirements and we'll get right back to you.</p>
             </div>
 
             <div className="p-6">
@@ -188,7 +188,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
                       type="text" 
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium focus:ring-2 focus:ring-[#008cff]/20 focus:border-[#008cff] outline-none transition-all placeholder:text-gray-400 text-gray-800"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium focus:ring-2 focus:ring-[#0E3B34]/20 focus:border-[#0E3B34] outline-none transition-all placeholder:text-gray-400 text-gray-800"
                       placeholder="John Doe"
                     />
                   </div>
@@ -199,7 +199,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
                       type="email" 
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium focus:ring-2 focus:ring-[#008cff]/20 focus:border-[#008cff] outline-none transition-all placeholder:text-gray-400 text-gray-800"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium focus:ring-2 focus:ring-[#0E3B34]/20 focus:border-[#0E3B34] outline-none transition-all placeholder:text-gray-400 text-gray-800"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -210,7 +210,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
                       rows={4}
                       value={formData.expectations}
                       onChange={(e) => setFormData({...formData, expectations: e.target.value})}
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium focus:ring-2 focus:ring-[#008cff]/20 focus:border-[#008cff] outline-none transition-all placeholder:text-gray-400 resize-none text-gray-800"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium focus:ring-2 focus:ring-[#0E3B34]/20 focus:border-[#0E3B34] outline-none transition-all placeholder:text-gray-400 resize-none text-gray-800"
                       placeholder="Tell us what you are looking for..."
                     ></textarea>
                   </div>
@@ -219,7 +219,7 @@ export default function PricingDisplay({ plan }: { plan: PlanData }) {
                     <button 
                       disabled={isSubmitting}
                       type="submit"
-                      className="w-full bg-[#0a192f] hover:bg-[#041422] disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-black py-3.5 px-6 rounded-xl transition-all shadow-md flex justify-center items-center h-12"
+                      className="w-full bg-[#0E3B34] hover:bg-[#092823] disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-black py-3.5 px-6 rounded-xl transition-all shadow-md flex justify-center items-center h-12"
                     >
                       {isSubmitting ? (
                         <Loader2 className="w-5 h-5 animate-spin text-white/70" />

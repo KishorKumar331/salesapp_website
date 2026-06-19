@@ -41,24 +41,24 @@ export default async function PricingPage() {
   const plan = await getPricing();
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f4f7f9] selection:bg-[#008cff]/20 pt-16">
+    <div className="min-h-screen flex flex-col bg-[#f4f7f9] selection:bg-[#0E3B34]/20 pt-16">
       
       {/* Navbar Placeholder if not injected by layout */}
       
       <section className="relative pt-20 pb-32 bg-[#041422] overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[600px] opacity-30 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#008cff] to-[#00cefc] rounded-full blur-[150px] mix-blend-screen mix-blend-lighten animate-pulse duration-3000"></div>
-          <div className="absolute top-20 right-20 w-[400px] h-[400px] bg-gradient-to-tr from-[#d12a2f] to-[#e53935] rounded-full blur-[150px] mix-blend-screen opacity-60"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#0E3B34] to-[#1C6C5E] rounded-full blur-[150px] mix-blend-screen mix-blend-lighten animate-pulse duration-3000"></div>
+          <div className="absolute top-20 right-20 w-[400px] h-[400px] bg-gradient-to-tr from-[#E0A23B] to-[#F1B855] rounded-full blur-[150px] mix-blend-screen opacity-60"></div>
         </div>
         
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center pt-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8">
-            <Sparkles className="w-4 h-4 text-[#00cefc]" />
+            <Sparkles className="w-4 h-4 text-[#E0A23B]" />
             <span className="text-blue-100 text-sm font-semibold tracking-wide uppercase">All-in-one platform</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-sans font-black text-white mb-6 tracking-tight drop-shadow-xl">
-            Single Pricing, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008cff] to-[#00cefc]">Infinite Value</span>
+            Single Pricing, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Infinite Value</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-100/80 font-medium max-w-2xl mx-auto leading-relaxed mb-12">

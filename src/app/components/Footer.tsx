@@ -20,7 +20,7 @@ export default function Footer() {
       {/* Trust & Design Marketplace Section */}
       <section className="bg-white border-t border-gray-100 py-16 text-center">
          <div className="mx-auto max-w-5xl px-4 flex flex-col items-center">
-            <ShieldCheck className="w-12 h-12 text-[#008cff] mb-6" />
+            <ShieldCheck className="w-12 h-12 text-[#0E3B34] mb-6" />
             <h3 className="text-2xl font-black text-gray-900 mb-2">Enterprise-Grade Security</h3>
             <p className="text-gray-500 font-medium max-w-xl mx-auto mb-8">
                Your client data, quotations, and margins are protected with AES-256 encryption. We never share your leads or pricing rules with anyone.
@@ -42,13 +42,13 @@ export default function Footer() {
           <div className="grid md:grid-cols-4 gap-12 border-b border-gray-800/80 pb-12 mb-8 text-left">
             <div className="md:col-span-2">
               <h3 className="text-2xl font-black text-white mb-4 tracking-wide flex items-center gap-2">
-                <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#008cff] to-[#00cefc] flex items-center justify-center shadow-lg"><span className="text-white text-xs">IP</span></span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008cff] to-[#00cefc]">Infinite</span> Packages
+                <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0E3B34] to-[#E0A23B] flex items-center justify-center shadow-lg"><span className="text-white text-xs">IP</span></span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Infinite</span> Packages
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed font-medium max-w-sm mb-6">
                 The modern quoting engine built exclusively for independent travel agents and solo entrepreneurs. Sell more, stress less.
               </p>
-              <div className="text-xs text-white/40 flex items-center gap-1 font-mono hover:text-[#008cff] cursor-pointer transition-colors">
+              <div className="text-xs text-white/40 flex items-center gap-1 font-mono hover:text-[#E0A23B] cursor-pointer transition-colors">
                 info@infinitepackages.com
               </div>
             </div>
@@ -62,9 +62,9 @@ export default function Footer() {
                   <Link href="/pricing" className="text-sm text-gray-400 hover:text-white transition-colors font-semibold">Pricing</Link>
                 </li>
                 <li>
-                  <Link href="/#marketplace" className="text-sm text-gray-400 hover:text-[#00cefc] transition-colors font-semibold flex items-center gap-2">
+                  <Link href="/#marketplace" className="text-sm text-gray-400 hover:text-[#E0A23B] transition-colors font-semibold flex items-center gap-2">
                      Design Marketplace 
-                     <span className="text-[9px] bg-[#008cff]/20 text-[#008cff] px-2 py-0.5 rounded uppercase tracking-wider font-black">New</span>
+                     <span className="text-[9px] bg-[#0E3B34]/20 text-[#0E3B34] px-2 py-0.5 rounded uppercase tracking-wider font-black">New</span>
                   </Link>
                 </li>
                 <li>
@@ -94,7 +94,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Infinite Packages - All Rights Reserved.
             </p>
             <p className="text-xs font-bold tracking-wide text-gray-600 flex items-center">
-              Backed by <span className="font-black text-white ml-1 text-transparent bg-clip-text bg-gradient-to-r from-[#d12a2f] to-[#e53935]">Infinite Packages API</span>
+              Backed by <span className="font-black text-white ml-1 text-transparent bg-clip-text bg-gradient-to-r from-[#E0A23B] to-[#F1B855]">Infinite Packages API</span>
             </p>
           </div>
         </div>

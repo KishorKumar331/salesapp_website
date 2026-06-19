@@ -50,15 +50,15 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-12 bg-white relative">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#f0f7ff] text-[#008cff] px-4 py-2 rounded-full text-sm font-bold tracking-wide mb-6">
+          <div className="inline-flex items-center gap-2 bg-[#0E3B34]/10 text-[#0E3B34] px-4 py-2 rounded-full text-sm font-bold tracking-wide mb-6">
             <MessageCircle className="w-4 h-4" />
             Frequently Asked Questions
           </div>
           <h2 className="text-4xl md:text-5xl font-sans font-black text-gray-900 mb-6 tracking-tight">
-            The Fears that Kill <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008cff] to-[#00cefc]">Your Sign-ups</span>
+            The Fears that Kill <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Your Sign-ups</span>
           </h2>
           <p className="text-lg text-gray-600 font-medium max-w-2xl mx-auto">
             Everything you need to know about starting your own independent travel agency right now.
@@ -70,7 +70,7 @@ export default function FAQSection() {
             <div 
               key={index}
               className={`border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 ${
-                openIndex === index ? 'bg-white shadow-[0_10px_30px_rgba(0,140,255,0.08)] border-[#008cff]/20' : 'bg-gray-50 hover:bg-white hover:shadow-sm'
+                openIndex === index ? 'bg-white shadow-[0_10px_30px_rgba(14,59,52,0.08)] border-[#0E3B34]/20' : 'bg-gray-50 hover:bg-white hover:shadow-sm'
               }`}
             >
               <button
@@ -81,12 +81,12 @@ export default function FAQSection() {
                   <span className="text-xs font-black text-gray-400 uppercase tracking-widest hidden sm:block w-20">
                     {faq.category}
                   </span>
-                  <span className={`font-bold text-gray-900 leading-snug ${openIndex === index ? 'text-[#008cff]' : ''}`}>
+                  <span className={`font-bold text-gray-900 leading-snug ${openIndex === index ? 'text-[#0E3B34]' : ''}`}>
                     {faq.question}
                   </span>
                 </div>
                 <div className={`flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all ${
-                  openIndex === index ? 'border-[#008cff] bg-[#008cff] text-white' : 'border-gray-200 text-gray-400'
+                  openIndex === index ? 'border-[#0E3B34] bg-[#0E3B34] text-white' : 'border-gray-200 text-gray-400'
                 }`}>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} />
                 </div>

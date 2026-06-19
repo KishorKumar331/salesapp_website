@@ -59,13 +59,13 @@ export default function Navbar() {
             }}
           >
             <img 
-              src="/IP-logo.png" 
+              src="/IP_mark.svg" 
               alt="I.P. Logo" 
               className="h-10 w-auto group-hover:scale-105 transition-transform duration-300 mr-3 filter drop-shadow-sm"
             />
             <div className="hidden sm:flex flex-col -space-y-1">
-              <span className="text-xl tracking-wide font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#008cff] to-[#0052cc]">Infinite</span>
-              <span className="text-sm font-semibold tracking-wide text-gray-600">Packages</span>
+              <span className="text-xl tracking-wide font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Infinite</span>
+              <span className="text-sm font-semibold tracking-wide text-[#0E3B34]">Packages</span>
             </div>
           </Link>
           <nav className="hidden md:flex items-center space-x-8">
@@ -78,8 +78,8 @@ export default function Navbar() {
               <Link 
                 key={item.name}
                 href={item.href} 
-                className={`text-sm font-bold transition-all duration-200 hover:text-[#008cff] ${
-                  pathname === item.href ? 'text-[#008cff]' : 'text-gray-700'
+                className={`text-sm font-bold transition-all duration-200 hover:text-[#E0A23B] ${
+                  pathname === item.href ? 'text-[#0E3B34]' : 'text-gray-700'
                 }`}
               >
                 {item.name}
@@ -88,7 +88,7 @@ export default function Navbar() {
             
             <a 
               href="https://dashboard.infinitepackages.com" 
-              className="ml-4 px-6 py-2.5 rounded-md bg-gradient-to-r from-[#008cff] to-[#0052cc] hover:from-[#0070cc] hover:to-[#0040a0] text-white text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg"
+              className="ml-4 px-6 py-2.5 rounded-md bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] hover:from-[#1C6C5E] hover:to-[#0E3B34] text-white text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg"
             >
               Login
             </a>
