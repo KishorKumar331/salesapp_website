@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, X, Loader2, LayoutDashboard, Briefcase, FileText, Users, Settings, TrendingUp, Wallet, MapPin, Plane } from "lucide-react";
+import { Check, X, Loader2, Zap, ShieldCheck, Smartphone, Sparkles, ArrowRight } from "lucide-react";
 
 import FeaturesSection from "./components/FeaturesSection";
 import ProblemSection from "./components/ProblemSection";
@@ -11,11 +11,10 @@ import StoryCarousel from "./components/StoryCarousel";
 import AppDownloadSection from "./components/AppDownloadSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
-import PricingSection from "./components/PricingSection";
 import Footer from "./components/Footer";
 
 export default function Home() {
-  // Modal State
+  // Support / Contact Modal State
   const [isSupportModalOpen, setIsSupportModalOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', expectations: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,44 +46,65 @@ export default function Home() {
     }, 300);
   };
 
+  const scrollToHowItWorks = () => {
+    const el = document.getElementById('how-it-works');
+    if (el) {
+      window.scrollTo({ top: el.offsetTop - 90, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#f8fafd]">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-4 lg:pt-28 lg:pb-8 overflow-hidden bg-[#f8fafd]">
-        {/* Decorative background elements */}
+      <section className="relative pt-16 pb-6 lg:pt-24 lg:pb-12 overflow-hidden bg-gradient-to-b from-[#f4f8f7] via-[#f8fafd] to-white">
+        {/* Ambient background glows */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#0E3B34]/10 rounded-full blur-[120px] opacity-70 pointer-events-none"></div>
-        <div className="absolute bottom-0 right-[-20%] w-[600px] h-[600px] bg-[#E0A23B]/5 rounded-full blur-[100px] opacity-50 pointer-events-none"></div>
+        <div className="absolute bottom-0 right-[-10%] w-[600px] h-[600px] bg-[#E0A23B]/8 rounded-full blur-[100px] opacity-60 pointer-events-none"></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center z-10">
-            <div className="inline-flex items-center gap-2 bg-white border border-[#0E3B34]/20 text-[#0E3B34] px-5 py-2 rounded-full text-sm font-bold tracking-wide mb-8 shadow-sm">
-              <span className="relative flex h-3 w-3">
+            <div className="inline-flex items-center gap-2 bg-white border border-[#0E3B34]/20 text-[#0E3B34] px-5 py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide mb-8 shadow-sm">
+              <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0E3B34] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#0E3B34]"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#0E3B34]"></span>
               </span>
               Journey to Ownership
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-black leading-tight text-gray-900 mb-6 tracking-tight max-w-5xl mx-auto">
-              "The voice that pitches for them can <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">build a brand of your own.</span>"
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-sans font-black leading-tight sm:leading-none text-gray-900 mb-6 tracking-tight max-w-5xl mx-auto">
+              "The voice that pitches for them can <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] via-[#124d44] to-[#E0A23B]">build a brand of your own.</span>"
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-medium mb-10 leading-relaxed">
-              Quote your own clients in under a minute. Run it on the side. Become the owner.
+            <p className="text-lg sm:text-2xl text-gray-600 max-w-3xl mx-auto font-medium mb-10 leading-relaxed">
+              Quote your own clients in under 60 seconds. Run your business independently. Build company equity.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button 
-                onClick={() => window.location.href='https://dashboard.infinitepackages.com'}
-                className="bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black px-8 py-4 rounded-full font-black text-lg shadow-[0_10px_20px_rgba(224,162,59,0.2)] hover:shadow-[0_15px_30px_rgba(224,162,59,0.3)] transition-all transform hover:-translate-y-1 w-full sm:w-auto"
+              <a 
+                href="https://dashboard.infinitepackages.com"
+                className="bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black px-9 py-4 rounded-full font-black text-lg shadow-[0_10px_25px_rgba(224,162,59,0.3)] hover:shadow-[0_15px_35px_rgba(224,162,59,0.4)] transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2"
               >
-                Get Started
-              </button>
-              <button className="bg-white border-2 border-gray-200 hover:border-[#E0A23B] text-gray-700 hover:text-[#0E3B34] px-8 py-4 rounded-full font-black text-lg transition-all shadow-sm w-full sm:w-auto">
+                Launch Dashboard <ArrowRight className="w-5 h-5" />
+              </a>
+              <button 
+                onClick={scrollToHowItWorks}
+                className="bg-white border-2 border-gray-200 hover:border-[#E0A23B] text-gray-800 hover:text-[#0E3B34] px-8 py-4 rounded-full font-black text-lg transition-all shadow-sm hover:shadow-md w-full sm:w-auto"
+              >
                 See How It Works
               </button>
             </div>
             
-            <p className="mt-6 text-sm font-medium text-gray-500">No credit card required &bull; Cancel anytime</p>
+            {/* Value Pills */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-bold text-gray-600">
+              <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-gray-100 shadow-2xs">
+                <Zap className="w-4 h-4 text-[#E0A23B]" /> 1-Minute PDF Quoting
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-gray-100 shadow-2xs">
+                <ShieldCheck className="w-4 h-4 text-[#0E3B34]" /> 100% Encrypted Data
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-gray-100 shadow-2xs">
+                <Smartphone className="w-4 h-4 text-emerald-600" /> Mobile Ready CRM
+              </div>
+            </div>
 
             {/* Storytelling Carousel */}
             <StoryCarousel />
@@ -97,74 +117,71 @@ export default function Home() {
       <HowToUseSection />
       
       {/* Custom PDF Design Section */}
-      <section id="marketplace" className="bg-[#f8fafd] pt-10 pb-12 text-center border-y border-gray-100">
+      <section id="marketplace" className="bg-[#f8fafd] pt-14 pb-14 text-center border-y border-gray-100 relative">
          <div className="mx-auto max-w-4xl px-4">
             <div className="inline-flex items-center gap-2 bg-[#0E3B34]/10 text-[#0E3B34] px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase mb-4">
-               PDF Customization
+               PDF Customization Studio
             </div>
-            <h2 className="text-3xl sm:text-4xl font-sans font-black text-gray-900 mb-4">
-               Create Your Own PDF Design
+            <h2 className="text-3xl sm:text-4xl font-sans font-black text-gray-900 mb-4 tracking-tight">
+               Bespoke PDF Itinerary Layouts
             </h2>
-            <p className="text-gray-600 font-medium mb-8 max-w-2xl mx-auto">
-               Design a professional itinerary layout tailored exactly to your brand's style. Control every aspect of your PDF quotes based on your business requirements.
+            <p className="text-gray-600 font-medium mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+               Design a professional itinerary layout tailored exactly to your brand's unique identity. Control page arrangements, headers, payment links, and hero images according to your business requirements.
             </p>
 
-            {/* Customization Options */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8 text-left">
+            {/* Customization Options Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-10 text-left">
               {[
-                { title: "Decide Page Length", desc: "Select custom pages or single-page summaries." },
-                { title: "Content Placing", desc: "Drag and drop itinerary items, hotels, and images." },
-                { title: "Action Buttons", desc: "Embed payment links and direct booking buttons." },
-                { title: "Tailored to You", desc: "Customized according to your exact requirements." }
+                { title: "Custom Page Length", desc: "Select multi-page detailed guides or concise single-page summaries." },
+                { title: "Dynamic Layout Placing", desc: "Arrange day-wise itineraries, hotel inclusions, and destination photos." },
+                { title: "Embedded Payment Links", desc: "Embed instant UPI and card payment links inside client PDF proposals." },
+                { title: "White-Label Branding", desc: "Fully branded with your company logo, contact info, and legal terms." }
               ].map((opt, idx) => (
-                <div key={idx} className="bg-white border border-gray-100 p-4 rounded-2xl shadow-sm">
+                <div key={idx} className="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-8 h-8 bg-[#0E3B34]/10 text-[#0E3B34] rounded-lg flex items-center justify-center font-bold text-sm mb-3">
                     ✓
                   </div>
-                  <h4 className="font-bold text-gray-900 text-sm mb-1">{opt.title}</h4>
-                  <p className="text-gray-400 text-[10px] leading-normal font-medium">{opt.desc}</p>
+                  <h4 className="font-bold text-gray-900 text-sm mb-1.5 leading-snug">{opt.title}</h4>
+                  <p className="text-gray-500 text-xs leading-normal font-medium">{opt.desc}</p>
                 </div>
               ))}
             </div>
 
-            {/* Pricing Offer */}
-            <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-white border border-gray-200/60 px-6 py-4 rounded-3xl shadow-sm">
+            {/* Tailored Customization Box */}
+            <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-white border border border-gray-200/80 px-8 py-5 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
               <div className="text-center sm:text-left">
-                <span className="text-xs text-gray-400 font-bold block">Exclusive Layout Access</span>
-                <div className="flex items-center gap-2 mt-0.5">
-                  <span className="line-through text-gray-400 text-sm font-bold">₹2,499</span>
-                  <span className="text-xl font-black text-[#E0A23B]">₹999 + taxes only</span>
-                </div>
+                <span className="text-xs text-gray-400 font-bold uppercase tracking-wider block">Custom Studio Request</span>
+                <span className="text-lg font-black text-[#0E3B34]">Need a Unique Itinerary Theme?</span>
+                <p className="text-xs text-gray-500 font-medium mt-0.5">Our design team crafts bespoke layouts tailored to your exact brand spec.</p>
               </div>
               <button 
                 onClick={() => window.location.href='mailto:tech.support@infinitepackages.com?subject=Custom PDF Design Layout Inquiry'}
-                className="bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black px-8 py-3 rounded-xl font-black text-sm transition-all shadow-[0_5px_15px_rgba(224,162,59,0.2)] hover:shadow-[0_8px_20px_rgba(224,162,59,0.3)] transform hover:-translate-y-0.5"
+                className="bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] hover:from-[#1C6C5E] hover:to-[#0E3B34] text-white px-7 py-3.5 rounded-xl font-black text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
               >
-                Customize Layout
+                Request Custom Layout
               </button>
             </div>
          </div>
       </section>
 
       <AppDownloadSection />
-      <PricingSection />
       <TestimonialsSection />
       <FAQSection />
 
-      {/* Support / Contact Overlay Catch */}
-      <section className="bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] text-white py-16 relative overflow-hidden">
+      {/* Support / Contact Section */}
+      <section className="bg-gradient-to-r from-[#0E3B34] via-[#124d44] to-[#1C6C5E] text-white py-16 relative overflow-hidden">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-sans font-black mb-6 drop-shadow-sm tracking-tight text-white">
-            Ready to upgrade your travel business?
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-black mb-5 tracking-tight text-white">
+            Ready to Upgrade Your Travel Business?
           </h2>
-          <p className="text-xl text-emerald-50 font-medium max-w-2xl mx-auto mb-10 opacity-90">
-            Send quotes instantly, collect payments faster, and run your travel agency like a pro.
+          <p className="text-lg sm:text-xl text-emerald-50 font-medium max-w-2xl mx-auto mb-10 opacity-90 leading-relaxed">
+            Send quotes instantly, collect client payments faster, and build your independent agency equity like a pro.
           </p>
           <button 
             onClick={() => setIsSupportModalOpen(true)}
-            className="bg-white text-[#0E3B34] hover:text-[#E0A23B] px-10 py-4 rounded-xl font-black text-lg shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-all transform hover:-translate-y-1"
+            className="bg-white text-[#0E3B34] hover:text-[#E0A23B] px-10 py-4 rounded-xl font-black text-lg shadow-xl transition-all transform hover:-translate-y-1"
           >
-            Leave us a Message
+            Leave Us a Message
           </button>
         </div>
       </section>
@@ -176,7 +193,7 @@ export default function Home() {
       {isSupportModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div 
-            className="absolute inset-0 bg-[#041422]/60 backdrop-blur-sm transition-opacity"
+            className="absolute inset-0 bg-[#041422]/70 backdrop-blur-sm transition-opacity"
             onClick={closeModal}
           ></div>
           
@@ -186,11 +203,12 @@ export default function Home() {
               <button 
                 onClick={closeModal}
                 className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors p-1"
+                aria-label="Close Modal"
               >
                 <X className="w-5 h-5" />
               </button>
               <h3 className="text-2xl font-black tracking-tight mb-1">How can we help?</h3>
-              <p className="text-emerald-50 text-sm font-medium opacity-90">Let us know your requirements and we'll get right back to you.</p>
+              <p className="text-emerald-50 text-sm font-medium opacity-90">Let us know your business goals and our team will connect with you.</p>
             </div>
 
             {/* Modal Body */}
@@ -200,8 +218,8 @@ export default function Home() {
                   <div className="w-16 h-16 bg-[#00ab6b]/10 rounded-full flex items-center justify-center mb-4">
                     <Check className="w-8 h-8 text-[#00ab6b]" strokeWidth={3} />
                   </div>
-                  <h4 className="text-xl font-black text-gray-900 mb-2">Message Sent!</h4>
-                  <p className="text-gray-500 font-medium text-sm">We've received your message and our support team will email you shortly.</p>
+                  <h4 className="text-xl font-black text-gray-900 mb-2">Message Received!</h4>
+                  <p className="text-gray-500 font-medium text-sm">We've received your details. Our support team will get back to you shortly.</p>
                   <button 
                     onClick={closeModal}
                     className="mt-8 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2.5 px-6 rounded-lg transition-colors text-sm"
@@ -241,7 +259,7 @@ export default function Home() {
                       value={formData.expectations}
                       onChange={(e) => setFormData({...formData, expectations: e.target.value})}
                       className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium focus:ring-2 focus:ring-[#0E3B34]/20 focus:border-[#0E3B34] outline-none transition-all placeholder:text-gray-400 resize-none text-gray-800"
-                      placeholder="Tell us what you are looking for..."
+                      placeholder="Tell us about your agency or customization needs..."
                     ></textarea>
                   </div>
                   
@@ -249,10 +267,10 @@ export default function Home() {
                     <button 
                       disabled={isSubmitting}
                       type="submit"
-                      className="w-full bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed text-black font-black py-3.5 px-6 rounded-xl transition-all shadow-[0_10px_20px_rgba(224,162,59,0.2)] flex justify-center items-center h-12"
+                      className="w-full bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed text-black font-black py-3.5 px-6 rounded-xl transition-all shadow-md flex justify-center items-center h-12"
                     >
                       {isSubmitting ? (
-                        <Loader2 className="w-5 h-5 animate-spin text-white/70" />
+                        <Loader2 className="w-5 h-5 animate-spin text-[#0E3B34]" />
                       ) : (
                         "Send Message"
                       )}

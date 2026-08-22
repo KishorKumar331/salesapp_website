@@ -3,10 +3,12 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
   const [bannerIndex, setBannerIndex] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const bannerMessages = [
     "Journey to Ownership: Stop building someone else's equity.",
@@ -20,53 +22,39 @@ export default function Navbar() {
       setBannerIndex((prev) => (prev + 1) % bannerMessages.length);
     }, 4500);
     return () => clearInterval(interval);
-  }, []);
+  }, [bannerMessages.length]);
 
-  useEffect(() => {
-    // This code will only run on the client side
-    const handleNavClick = (e: Event, targetId: string) => {
-      // Only handle smooth scrolling if we're on the same page
-      if (pathname === '/') {
-        e.preventDefault();
-        const element = document.getElementById(targetId);
-        if (element) {
-          window.scrollTo({
-            top: element.offsetTop - 100, // Adjust offset for fixed header
-            behavior: 'smooth'
-          });
-        }
-      }
-    };
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'How It Works', href: '/#how-it-works' },
+    { name: 'Custom PDF Studio', href: '/#marketplace' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms & Conditions', href: '/terms' },
+  ];
 
-    // Add event listeners here if needed
-    return () => {
-      // Cleanup event listeners here if needed
-    };
-  }, [pathname]);
-
-  // This function will be used in the JSX
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    if (pathname === '/') {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/#') && pathname === '/') {
       e.preventDefault();
-      // The actual scrolling is now handled by the effect
+      const targetId = href.replace('/#', '');
       const element = document.getElementById(targetId);
       if (element) {
         window.scrollTo({
-          top: element.offsetTop - 100,
+          top: element.offsetTop - 90,
           behavior: 'smooth'
         });
+        setIsMobileMenuOpen(false);
       }
     }
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b border-gray-200 transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all duration-300">
       {/* Top Rotating Announcement Banner */}
-      <div className="bg-[#0E3B34] text-white text-center py-2 px-4 text-xs font-bold tracking-wide transition-all duration-500 ease-in-out relative h-9 overflow-hidden flex items-center justify-center border-b border-[#0E3B34]/20">
+      <div className="bg-gradient-to-r from-[#0E3B34] via-[#124d44] to-[#0E3B34] text-white text-center py-2 px-4 text-xs font-bold tracking-wide relative h-9 overflow-hidden flex items-center justify-center border-b border-[#0E3B34]/20 shadow-inner">
         {bannerMessages.map((msg, idx) => (
           <span 
             key={idx}
-            className={`absolute transition-all duration-500 ease-in-out ${
+            className={`absolute transition-all duration-500 ease-in-out px-4 text-center ${
               bannerIndex === idx ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
             }`}
           >
@@ -74,8 +62,11 @@ export default function Navbar() {
           </span>
         ))}
       </div>
+
       <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
+          
+          {/* Brand Logo */}
           <Link 
             href="/" 
             className="flex items-center group"
@@ -83,29 +74,28 @@ export default function Navbar() {
               if (pathname === '/') {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+                setIsMobileMenuOpen(false);
               }
             }}
           >
             <img 
               src="/IP_mark.svg" 
-              alt="I.P. Logo" 
+              alt="Infinite Packages Logo" 
               className="h-10 w-auto group-hover:scale-105 transition-transform duration-300 mr-3 filter drop-shadow-sm"
             />
-            <div className="hidden sm:flex flex-col -space-y-1">
-              <span className="text-xl tracking-wide font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Infinite</span>
-              <span className="text-sm font-semibold tracking-wide text-[#0E3B34]">Packages</span>
+            <div className="flex flex-col -space-y-1">
+              <span className="text-xl tracking-tight font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Infinite</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-[#0E3B34]/80">Packages</span>
             </div>
           </Link>
-          <nav className="hidden md:flex items-center space-x-8">
-            {[
-              { name: 'Home', href: '/' },
-              { name: 'Pricing', href: '/pricing' },
-              { name: 'Privacy Policy', href: '/privacy' },
-              { name: 'Terms', href: '/terms' },
-            ].map((item) => (
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-7">
+            {navLinks.map((item) => (
               <Link 
                 key={item.name}
-                href={item.href} 
+                href={item.href}
+                onClick={(e) => handleSmoothScroll(e, item.href)}
                 className={`text-sm font-bold transition-all duration-200 hover:text-[#E0A23B] ${
                   pathname === item.href ? 'text-[#0E3B34]' : 'text-gray-700'
                 }`}
@@ -116,13 +106,48 @@ export default function Navbar() {
             
             <a 
               href="https://dashboard.infinitepackages.com" 
-              className="ml-4 px-6 py-2.5 rounded-md bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] hover:from-[#1C6C5E] hover:to-[#0E3B34] text-white text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg"
+              className="ml-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] hover:from-[#1C6C5E] hover:to-[#0E3B34] text-white text-sm font-black transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-1.5"
             >
-              Start Now
+              Start Now <ArrowRight className="w-4 h-4" />
             </a>
           </nav>
+
+          {/* Mobile Menu Toggle Button */}
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 rounded-xl text-gray-700 hover:bg-gray-100 focus:outline-none transition-colors"
+            aria-label="Toggle Navigation Menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6 text-[#0E3B34]" /> : <Menu className="w-6 h-6 text-[#0E3B34]" />}
+          </button>
+
         </div>
       </div>
+
+      {/* Mobile Drawer Navigation */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white border-b border-gray-200 px-4 pt-3 pb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200 shadow-xl">
+          {navLinks.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={(e) => handleSmoothScroll(e, item.href)}
+              className="block px-4 py-2.5 rounded-xl text-base font-bold text-gray-800 hover:bg-[#0E3B34]/5 hover:text-[#0E3B34] transition-colors"
+            >
+              {item.name}
+            </Link>
+          ))}
+          <div className="pt-2">
+            <a
+              href="https://dashboard.infinitepackages.com"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#E0A23B] to-[#F1B855] text-black font-black py-3 px-6 rounded-xl shadow-md text-base"
+            >
+              Launch Dashboard <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

@@ -1,43 +1,43 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown, MessageCircle } from 'lucide-react';
+import { ChevronDown, MessageCircle, HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
-    category: "Legal",
-    question: "Do I need GST or company registration to start?",
-    answer: "No. You don't need GST, company registration, or any paperwork to start and test your confidence. Build your business first, handle legalities later."
+    category: "Legal & Setup",
+    question: "Do I need GST or company registration to start using the platform?",
+    answer: "No. You don't need immediate GST registration or legal incorporation to start testing your market demand. You can build your client base first and incorporate your business as you grow."
   },
   {
-    category: "Setup",
-    question: "Do I need a physical office?",
-    answer: "No. It is just you and your mobile phone—that is your complete office. Operate from anywhere, anytime."
+    category: "Office & Location",
+    question: "Do I need a physical office location?",
+    answer: "No. Your smartphone or laptop is your entire mobile office. Operate seamlessly from anywhere, anytime."
   },
   {
-    category: "Technical",
-    question: "Is the platform too technical to use?",
-    answer: "No. Everything is designed in layman's terms. You only need 5 to 7 clicks to generate a professional 4-night package for any destination."
+    category: "Ease of Use",
+    question: "Is the quotation generator complex or technical to operate?",
+    answer: "Not at all. The dashboard is designed for maximum speed. In just 5 to 7 simple clicks, you can construct a professional multi-night itinerary for any destination."
   },
   {
     category: "Destinations",
-    question: "What if my destination is not in the dashboard?",
-    answer: "We are on a mission to onboard all tourist destinations. If the system is missing something, write to us and we will deploy it on the very same day."
+    question: "What if my target destination is not listed in the dashboard?",
+    answer: "We continuously expand our inventory library. If you need a specialized destination or custom tour package layout, contact our support team and we can deploy custom destination templates rapidly."
   },
   {
-    category: "Website",
-    question: "Only a dashboard is not enough, I need a website to impress my clients?",
-    answer: "Do not worry. We reach out to every business for a website. We discuss, build, and deploy your custom website in a maximum of 2 days."
+    category: "Website & Branding",
+    question: "Can I get a custom dedicated website for my agency?",
+    answer: "Yes! In addition to white-labeled PDF quotes, we design and deploy bespoke custom web properties for travel agencies within 48 business hours."
   },
   {
-    category: "Team",
-    question: "Can I manage my team in the dashboard?",
-    answer: "Yes. Add your member, share them leads, and maintain full control over team members."
+    category: "Team Management",
+    question: "Can I add sub-agents or sales staff members to my account?",
+    answer: "Yes. You can invite team members, assign lead pipelines, and maintain full administrator security controls over profit margin visibility."
   },
   {
     category: "Privacy",
-    question: "Will my employer or friends find out that I am using this platform?",
-    answer: "No. No one can ever get this information unless you explicitly choose to share it yourself. Your account is 100% private."
+    question: "Is my usage and client data completely private?",
+    answer: "Yes. Account data, customer contacts, and quotation pricing remain 100% private and protected with AES-256 encryption. We never share your data."
   }
 ];
 
@@ -45,18 +45,19 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-12 bg-white relative">
+    <section className="py-16 bg-white relative">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#0E3B34]/10 text-[#0E3B34] px-4 py-2 rounded-full text-sm font-bold tracking-wide mb-6">
+        
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 bg-[#0E3B34]/10 text-[#0E3B34] px-4 py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide mb-5">
             <MessageCircle className="w-4 h-4" />
             Frequently Asked Questions
           </div>
-          <h2 className="text-4xl md:text-5xl font-sans font-black text-gray-900 mb-6 tracking-tight">
-            The Fears that Kill <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Your Sign-ups</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-black text-gray-900 mb-5 tracking-tight">
+            Got Questions? <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">We've Got Answers</span>
           </h2>
-          <p className="text-lg text-gray-600 font-medium max-w-2xl mx-auto">
-            Everything you need to know about starting your own independent travel agency right now.
+          <p className="text-base sm:text-lg text-gray-600 font-medium max-w-2xl mx-auto leading-relaxed">
+            Everything you need to know about starting and managing your independent travel agency business.
           </p>
         </div>
 
@@ -64,8 +65,8 @@ export default function FAQSection() {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className={`border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 ${
-                openIndex === index ? 'bg-white shadow-[0_10px_30px_rgba(14,59,52,0.08)] border-[#0E3B34]/20' : 'bg-gray-50 hover:bg-white hover:shadow-sm'
+              className={`border rounded-2xl overflow-hidden transition-all duration-300 ${
+                openIndex === index ? 'bg-white shadow-[0_10px_30px_rgba(14,59,52,0.08)] border-[#0E3B34]/30' : 'bg-[#fcfdfe] hover:bg-white border-gray-100 hover:shadow-sm'
               }`}
             >
               <button
@@ -73,10 +74,10 @@ export default function FAQSection() {
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
               >
                 <div className="flex items-center gap-4 pr-4">
-                  <span className="text-xs font-black text-gray-400 uppercase tracking-widest hidden sm:block w-28 flex-shrink-0">
+                  <span className="text-[10px] font-black text-[#0E3B34] uppercase tracking-widest bg-[#0E3B34]/10 px-2.5 py-1 rounded-md hidden sm:inline-block flex-shrink-0">
                     {faq.category}
                   </span>
-                  <span className={`font-bold text-gray-900 leading-snug ${openIndex === index ? 'text-[#0E3B34]' : ''}`}>
+                  <span className={`font-black text-gray-900 text-base sm:text-lg leading-snug ${openIndex === index ? 'text-[#0E3B34]' : ''}`}>
                     {faq.question}
                   </span>
                 </div>
@@ -92,13 +93,14 @@ export default function FAQSection() {
                   openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 pb-6 pt-2 sm:pl-[120px] text-gray-600 font-medium leading-relaxed text-sm lg:text-base">
+                <div className="px-6 pb-6 pt-1 sm:pl-[140px] text-gray-600 font-medium leading-relaxed text-sm sm:text-base border-t border-gray-50 mt-1">
                   {faq.answer}
                 </div>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
