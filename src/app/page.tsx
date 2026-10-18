@@ -4,6 +4,9 @@ import { useState } from "react";
 import { Check, X, Loader2, Zap, ShieldCheck, Smartphone, Sparkles, ArrowRight } from "lucide-react";
 
 import FeaturesSection from "./components/FeaturesSection";
+import GroupBookingsSection from "./components/GroupBookingsSection";
+import ComparisonSection from "./components/ComparisonSection";
+import FreePlanSection from "./components/FreePlanSection";
 import ProblemSection from "./components/ProblemSection";
 import ProfitCalculator from "./components/ProfitCalculator";
 import HowToUseSection from "./components/HowToUseSection";
@@ -67,15 +70,19 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0E3B34] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#0E3B34]"></span>
               </span>
-              Journey to Ownership
+              Modern Lead & Quotation Engine • Travel Sales CRM
             </div>
             
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-sans font-black leading-tight sm:leading-none text-gray-900 mb-6 tracking-tight max-w-5xl mx-auto">
-              "The voice that pitches for them can <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] via-[#124d44] to-[#E0A23B]">build a brand of your own.</span>"
+              Travel Agent CRM Software Built to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] via-[#124d44] to-[#E0A23B]">Close Quotes Faster</span>
             </h1>
             
-            <p className="text-lg sm:text-2xl text-gray-600 max-w-3xl mx-auto font-medium mb-10 leading-relaxed">
-              Quote your own clients in under 60 seconds. Run your business independently. Build company equity.
+            <p className="text-lg sm:text-2xl text-gray-700 max-w-3xl mx-auto font-medium mb-3 leading-relaxed">
+              Manage client inquiries, automate follow-ups, and generate professional quotes in minutes.
+            </p>
+
+            <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto font-normal mb-10 leading-relaxed">
+              QuickQuote combines high-speed travel itinerary generation with client lead management. Replace clunky spreadsheets with an intuitive CRM tailored for independent agents, DMCs, and boutique tour operators.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -83,20 +90,23 @@ export default function Home() {
                 href="https://dashboard.infinitepackages.com"
                 className="bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black px-9 py-4 rounded-full font-black text-lg shadow-[0_10px_25px_rgba(224,162,59,0.3)] hover:shadow-[0_15px_35px_rgba(224,162,59,0.4)] transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2"
               >
-                Launch Dashboard <ArrowRight className="w-5 h-5" />
+                Start with QuickQuote Free <ArrowRight className="w-5 h-5" />
               </a>
               <button 
-                onClick={scrollToHowItWorks}
-                className="bg-white border-2 border-gray-200 hover:border-[#E0A23B] text-gray-800 hover:text-[#0E3B34] px-8 py-4 rounded-full font-black text-lg transition-all shadow-sm hover:shadow-md w-full sm:w-auto"
+                onClick={() => setIsSupportModalOpen(true)}
+                className="bg-white border-2 border-gray-200 hover:border-[#E0A23B] text-gray-800 hover:text-[#0E3B34] px-8 py-4 rounded-full font-black text-lg transition-all shadow-sm hover:shadow-md w-full sm:w-auto flex items-center justify-center gap-2"
               >
-                See How It Works
+                Book a Demo
               </button>
             </div>
             
             {/* Value Pills */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-bold text-gray-600">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs font-bold text-gray-600">
               <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-gray-100 shadow-2xs">
                 <Zap className="w-4 h-4 text-[#E0A23B]" /> 1-Minute PDF Quoting
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-gray-100 shadow-2xs">
+                <Sparkles className="w-4 h-4 text-[#0E3B34]" /> Best CRM Software for Travel Agents
               </div>
               <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-gray-100 shadow-2xs">
                 <ShieldCheck className="w-4 h-4 text-[#0E3B34]" /> 100% Encrypted Data
@@ -111,9 +121,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Feature Section: Lead & Pipeline Management (Keywords: crm travel agent, crm travel system, travel crm systems, B2B sales travel) */}
+      <FeaturesSection />
+
+      {/* Feature Section: Group Bookings & Itineraries (Keywords: Group Travel CRM, Is Travefy a CRM) */}
+      <GroupBookingsSection />
+
+      {/* Comparison Section: Why Agencies Switch from Complex CRMs (Keywords: Salesforce CRM for Travel Agency, Vacation CRM vs TravelJoy) */}
+      <ComparisonSection />
+
       <ProblemSection />
       <ProfitCalculator />
-      <FeaturesSection />
       <HowToUseSection />
       
       {/* Custom PDF Design Section */}
@@ -163,6 +181,9 @@ export default function Home() {
             </div>
          </div>
       </section>
+
+      {/* Free Plan & Onboarding Section (Keywords: free travel agent crm software, travel agent crm free, travel agency crm software free) */}
+      <FreePlanSection />
 
       <AppDownloadSection />
       <TestimonialsSection />

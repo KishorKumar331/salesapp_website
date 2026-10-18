@@ -34,12 +34,20 @@ export default function Footer() {
             
             <div className="md:col-span-2">
               <h3 className="text-2xl font-black text-white mb-4 tracking-wide flex items-center gap-3">
-                <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0E3B34] to-[#E0A23B] flex items-center justify-center shadow-lg"><span className="text-white text-xs font-black">IP</span></span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-[#E0A23B]">Infinite Packages</span>
+                <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0E3B34] to-[#E0A23B] flex items-center justify-center shadow-lg"><span className="text-white text-xs font-black">QQ</span></span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-[#E0A23B]">QuickQuote</span>
+                <span className="text-xs text-gray-400 font-bold tracking-widest uppercase">by Infinite Packages</span>
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed font-medium max-w-sm mb-6">
-                The modern quoting engine built exclusively for independent travel agents, agency owners, and solo entrepreneurs. Sell more, stress less.
+              <p className="text-sm text-gray-400 leading-relaxed font-medium max-w-sm mb-4">
+                The modern sales CRM designed for travel agents, tour operators, and agencies. Manage leads, track group travel, and send beautiful itineraries in minutes.
               </p>
+              
+              {/* Target Keyword: crm travel agent login micro-copy */}
+              <div className="bg-[#0e3b34]/30 border border-[#0e3b34]/50 rounded-xl p-3.5 max-w-sm mb-5 text-xs text-gray-300">
+                <span className="text-[#E0A23B] font-bold block mb-1">Travel Agent Portal:</span>
+                Existing partner or agency? Access your dashboard via the <a href="https://dashboard.infinitepackages.com" title="CRM Travel Agent Login" className="text-white font-bold underline hover:text-[#E0A23B] transition-colors">Travel Agent Login</a> at the top right of the navigation bar.
+              </div>
+
               <div className="text-xs text-emerald-400/90 flex items-center gap-2 font-mono hover:text-[#E0A23B] transition-colors">
                 <Mail className="w-3.5 h-3.5" /> support@infinitepackages.com
               </div>
@@ -47,24 +55,34 @@ export default function Footer() {
 
             <div>
               <h4 className="text-xs font-black text-white mb-6 uppercase tracking-widest opacity-80">
-                Platform
+                CRM Travel System
               </h4>
               <ul className="space-y-3.5">
                 <li>
-                  <a href="https://dashboard.infinitepackages.com" className="text-sm text-gray-400 hover:text-white transition-colors font-semibold flex items-center gap-1">
-                    Agent Dashboard <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+                  <a href="https://dashboard.infinitepackages.com" title="CRM Travel Agent Login" className="text-sm text-gray-400 hover:text-white transition-colors font-semibold flex items-center gap-1">
+                    Travel Agent Login <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
                   </a>
+                </li>
+                <li>
+                  <Link href="/#features" className="text-sm text-gray-400 hover:text-[#E0A23B] transition-colors font-semibold">
+                    Lead & Pipeline Management
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#group-travel" className="text-sm text-gray-400 hover:text-[#E0A23B] transition-colors font-semibold">
+                    Group Travel CRM
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#comparison" className="text-sm text-gray-400 hover:text-[#E0A23B] transition-colors font-semibold">
+                    Why Switch from Complex CRMs
+                  </Link>
                 </li>
                 <li>
                   <Link href="/#marketplace" className="text-sm text-gray-400 hover:text-[#E0A23B] transition-colors font-semibold flex items-center gap-2">
                      PDF Custom Studio
                      <span className="text-[9px] bg-[#E0A23B]/20 text-[#E0A23B] px-2 py-0.5 rounded uppercase tracking-wider font-black">New</span>
                   </Link>
-                </li>
-                <li>
-                  <a href="https://dashboard.infinitepackages.com" className="text-sm text-gray-400 hover:text-white transition-colors font-semibold">
-                    Android Mobile App
-                  </a>
                 </li>
               </ul>
             </div>
@@ -87,10 +105,10 @@ export default function Footer() {
           
           <div className="flex flex-col md:flex-row items-center justify-between text-left gap-4">
             <p className="text-xs font-bold tracking-wide text-gray-500 uppercase">
-              © {new Date().getFullYear()} Infinite Packages — All Rights Reserved.
+              © {new Date().getFullYear()} QuickQuote by Infinite Packages — All Rights Reserved.
             </p>
             <p className="text-xs font-bold tracking-wide text-gray-500 flex items-center">
-              Powered by <span className="font-black ml-1 text-transparent bg-clip-text bg-gradient-to-r from-[#E0A23B] to-[#F1B855]">Infinite Packages B2B API Engine</span>
+              Best CRM Software for Travel Agents • <span className="font-black ml-1 text-transparent bg-clip-text bg-gradient-to-r from-[#E0A23B] to-[#F1B855]">QuickQuote Engine</span>
             </p>
           </div>
         </div>

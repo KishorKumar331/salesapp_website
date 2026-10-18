@@ -5,6 +5,16 @@ import { ChevronDown, MessageCircle, HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
+    category: "CRM Basics",
+    question: "What is CRM software and how does it work for travel agents?",
+    answer: "A travel CRM organizes client inquiries, tracks quote revisions, and automates booking follow-ups. QuickQuote automates administrative work so travel planners can turn inquiries into confirmed bookings faster."
+  },
+  {
+    category: "Transfers & Logistics",
+    question: "Can QuickQuote handle transportation and group transfers?",
+    answer: "Yes. QuickQuote lets you itemize flight legs, transfers, hotel vouchers, and sightseeing activities into one clear, itemized itinerary. It functions seamlessly as modern CRM software for transportation companies, ground handlers, and tour operators."
+  },
+  {
     category: "Legal & Setup",
     question: "Do I need GST or company registration to start using the platform?",
     answer: "No. You don't need immediate GST registration or legal incorporation to start testing your market demand. You can build your client base first and incorporate your business as you grow."
@@ -45,7 +55,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-16 bg-white relative">
+    <section id="faq" className="py-20 bg-white relative">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-14">

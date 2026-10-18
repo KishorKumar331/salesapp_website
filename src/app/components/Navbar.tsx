@@ -11,10 +11,10 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const bannerMessages = [
-    "Journey to Ownership: Stop building someone else's equity.",
-    "Less than 1-minute quoting: Sell professional packages instantly.",
-    "Secure CRM: Confirm payments only by administrator access.",
-    "Start your travel agency on the side today."
+    "QuickQuote: Travel Agent CRM Software Built to Close Quotes Faster.",
+    "Unified Travel CRM System: Move WhatsApp inquiries straight to bookings.",
+    "Group Travel CRM: Multi-pax manifests, split payments & instant day-wise PDFs.",
+    "Start Free: Online travel agent software with zero setup fees."
   ];
 
   useEffect(() => {
@@ -25,11 +25,11 @@ export default function Navbar() {
   }, [bannerMessages.length]);
 
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'How It Works', href: '/#how-it-works' },
-    { name: 'Custom PDF Studio', href: '/#marketplace' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms & Conditions', href: '/terms' },
+    { name: 'Features', href: '/#features' },
+    { name: 'Group Bookings', href: '/#group-travel' },
+    { name: 'Why QuickQuote', href: '/#comparison' },
+    { name: 'Reviews', href: '/#reviews' },
+    { name: 'FAQ', href: '/#faq' },
   ];
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -80,17 +80,17 @@ export default function Navbar() {
           >
             <img 
               src="/IP_mark.svg" 
-              alt="Infinite Packages Logo" 
+              alt="QuickQuote by Infinite Packages Logo" 
               className="h-10 w-auto group-hover:scale-105 transition-transform duration-300 mr-3 filter drop-shadow-sm"
             />
             <div className="flex flex-col -space-y-1">
-              <span className="text-xl tracking-tight font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Infinite</span>
-              <span className="text-xs font-bold tracking-widest uppercase text-[#0E3B34]/80">Packages</span>
+              <span className="text-xl tracking-tight font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">QuickQuote</span>
+              <span className="text-[10px] font-bold tracking-widest uppercase text-[#0E3B34]/70">by Infinite Packages</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-7">
+          <nav className="hidden md:flex items-center space-x-6">
             {navLinks.map((item) => (
               <Link 
                 key={item.name}
@@ -104,11 +104,20 @@ export default function Navbar() {
               </Link>
             ))}
             
+            {/* Travel Agent Login Link (Target Keyword: crm travel agent login) */}
             <a 
               href="https://dashboard.infinitepackages.com" 
-              className="ml-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] hover:from-[#1C6C5E] hover:to-[#0E3B34] text-white text-sm font-black transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-1.5"
+              title="CRM Travel Agent Login"
+              className="text-sm font-bold text-gray-700 hover:text-[#0E3B34] px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              Start Now <ArrowRight className="w-4 h-4" />
+              Travel Agent Login
+            </a>
+
+            <a 
+              href="https://dashboard.infinitepackages.com" 
+              className="ml-1 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] hover:from-[#1C6C5E] hover:to-[#0E3B34] text-white text-sm font-black transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-1.5"
+            >
+              Start Free <ArrowRight className="w-4 h-4" />
             </a>
           </nav>
 
@@ -137,13 +146,21 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-          <div className="pt-2">
+          <div className="pt-2 space-y-2">
+            <a
+              href="https://dashboard.infinitepackages.com"
+              title="CRM Travel Agent Login"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full flex justify-center items-center gap-2 border border-gray-300 text-gray-800 font-bold py-2.5 px-6 rounded-xl hover:bg-gray-50 text-sm"
+            >
+              Travel Agent Login
+            </a>
             <a
               href="https://dashboard.infinitepackages.com"
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#E0A23B] to-[#F1B855] text-black font-black py-3 px-6 rounded-xl shadow-md text-base"
             >
-              Launch Dashboard <ArrowRight className="w-4 h-4" />
+              Start Free Trial <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>

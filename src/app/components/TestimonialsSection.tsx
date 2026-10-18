@@ -5,22 +5,25 @@ import { Star, Quote, ShieldCheck } from 'lucide-react';
 const testimonials = [
   {
     name: "Rahul Sharma",
-    role: "Former Agency Sales Exec, Now Independent Founder",
-    content: "I was hesitant to strike out on my own because I didn't know how to generate sleek multi-destination PDFs quickly. I used to rely on standard supplier brochures. Infinite Packages made me look like I had an agency design team behind me from day one. I closed my first Maldives package within 48 hours.",
+    role: "Founder, Wanderlust Holidays",
+    content: "QuickQuote cut our quotation turnaround from 3 hours to under 2 minutes. Our lead-to-booking conversion rate jumped by 42% in our first month alone.",
+    highlight: "90% time saved per quote",
     initials: "RS",
     color: "from-[#0E3B34] to-[#1C6C5E]"
   },
   {
     name: "Priya Desai",
-    role: "Independent Travel Consultant",
-    content: "Tracking client payments in Excel was a nightmare when clients paid in 3 different instalments. The payment tracker alone is an absolute game-changer for my business. Now I just open my dashboard on my phone and see exactly who owes what with admin confirmation locks.",
+    role: "Independent Luxury Travel Advisor",
+    content: "The automated reminders ensure no inquiry goes cold. Delivering branded day-wise PDF quotes within 60 seconds helped me double my booking closures.",
+    highlight: "+45% booking conversion",
     initials: "PD",
     color: "from-[#E0A23B] to-[#F1B855]"
   },
   {
     name: "Vikram Reddy",
-    role: "Travel Advisory Founder",
-    content: "The best part is how polished everything looks. The quotes look so premium that clients instantly trust our quotes over traditional agency offices. I create proposals on my phone during lunch break and collect deposit confirmations before evening.",
+    role: "Director, Global Horizons DMC",
+    content: "Hands down the best CRM for the travel industry. We manage both retail packages and B2B MICE groups seamlessly with zero spreadsheet errors.",
+    highlight: "3x daily quotation volume",
     initials: "VR",
     color: "from-[#041422] to-[#0a233b]"
   }
@@ -28,7 +31,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-16 bg-[#f8fafd] relative overflow-hidden">
+    <section id="reviews" className="py-20 bg-[#f8fafd] relative overflow-hidden">
       {/* Ambient background glows */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#0E3B34]/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#E0A23B]/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -37,13 +40,13 @@ export default function TestimonialsSection() {
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 bg-[#0E3B34]/5 border border-[#0E3B34]/15 text-[#0E3B34] px-4 py-1.5 rounded-full text-xs font-black tracking-wide mb-5 shadow-sm">
             <ShieldCheck className="w-4 h-4 text-[#E0A23B]" />
-            100% Private & Secure &bull; Trusted by Top Independent Agents
+            Travel Agent CRM Reviews • Rated 4.9/5 by 500+ Advisors
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-black text-gray-900 mb-4 tracking-tight">
-            Don't Just Take <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Our Word for It</span>
+            Trusted by Growing Travel Agencies & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E3B34] to-[#E0A23B]">Independent Advisors</span>
           </h2>
-          <p className="text-gray-600 font-medium max-w-2xl mx-auto text-base">
-            See how travel professionals built their independent brand and scaled their quoting velocity.
+          <p className="text-gray-600 font-medium max-w-2xl mx-auto text-base sm:text-lg">
+            See how travel professionals use the best CRM in the travel industry to slash quotation time and maximize lead-to-booking conversion rates.
           </p>
         </div>
 
@@ -58,13 +61,18 @@ export default function TestimonialsSection() {
               </div>
               
               <div>
-                <div className="flex items-center gap-1 mb-5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-[#ffbd2e] fill-current" />
-                  ))}
+                <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-[#ffbd2e] fill-current" />
+                    ))}
+                  </div>
+                  <span className="text-[10px] font-black uppercase tracking-wider text-[#0E3B34] bg-[#0E3B34]/10 px-2.5 py-1 rounded-md">
+                    {t.highlight}
+                  </span>
                 </div>
                 
-                <p className="text-gray-600 font-medium leading-relaxed text-sm sm:text-base mb-8 relative z-10">
+                <p className="text-gray-700 font-medium leading-relaxed text-sm sm:text-base mb-8 relative z-10">
                   "{t.content}"
                 </p>
               </div>
