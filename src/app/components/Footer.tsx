@@ -43,9 +43,30 @@ export default function Footer() {
               </p>
               
               {/* Target Keyword: crm travel agent login micro-copy */}
-              <div className="bg-[#0e3b34]/30 border border-[#0e3b34]/50 rounded-xl p-3.5 max-w-sm mb-5 text-xs text-gray-300">
+              <div className="bg-[#0e3b34]/30 border border-[#0e3b34]/50 rounded-xl p-3.5 max-w-sm mb-4 text-xs text-gray-300">
                 <span className="text-[#E0A23B] font-bold block mb-1">Travel Agent Portal:</span>
                 Existing partner or agency? Access your dashboard via the <a href="https://dashboard.infinitepackages.com" title="CRM Travel Agent Login" className="text-white font-bold underline hover:text-[#E0A23B] transition-colors">Travel Agent Login</a> at the top right of the navigation bar.
+              </div>
+
+              {/* Get App Button for Google Play Store */}
+              <div className="mb-5">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.salesapp.quickquotes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-[#071723] hover:bg-[#0b2234] border border-gray-700 hover:border-[#E0A23B] px-4 py-2.5 rounded-xl transition-all shadow-md group"
+                >
+                  <svg className="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none">
+                    <path d="M3.609 1.814L13.793 12 3.61 22.186A2.298 2.298 0 0 1 3 20.584V3.416c0-.623.232-1.2.609-1.602z" fill="#00E676"/>
+                    <path d="M17.438 8.355L4.72 1.077c-.368-.21-.777-.315-1.111-.315l10.184 11.238 3.645-3.645z" fill="#FFD54F"/>
+                    <path d="M3.609 23.238c.334 0 .743-.105 1.111-.315l12.718-7.278-3.645-3.645L3.609 23.238z" fill="#FF3D00"/>
+                    <path d="M21.365 10.609l-3.927-2.254-3.645 3.645 3.645 3.645 3.927-2.254c.731-.418 1.185-1.196 1.185-2.041 0-.845-.454-1.623-1.185-2.041z" fill="#00B0FF"/>
+                  </svg>
+                  <div className="text-left">
+                    <span className="block text-[9px] uppercase tracking-widest text-gray-400 font-bold leading-tight">GET IT ON</span>
+                    <span className="block text-sm font-black text-white group-hover:text-[#E0A23B] transition-colors leading-tight">Google Play</span>
+                  </div>
+                </a>
               </div>
 
               <div className="text-xs text-emerald-400/90 flex items-center gap-2 font-mono hover:text-[#E0A23B] transition-colors">
@@ -58,6 +79,16 @@ export default function Footer() {
                 CRM Travel System
               </h4>
               <ul className="space-y-3.5">
+                <li>
+                  <a 
+                    href="https://play.google.com/store/apps/details?id=com.salesapp.quickquotes" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm text-[#E0A23B] hover:text-[#F1B855] transition-colors font-bold flex items-center gap-1.5"
+                  >
+                    Get Android App <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                </li>
                 <li>
                   <a href="https://dashboard.infinitepackages.com" title="CRM Travel Agent Login" className="text-sm text-gray-400 hover:text-white transition-colors font-semibold flex items-center gap-1">
                     Travel Agent Login <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />

@@ -97,10 +97,18 @@ export default function AppDownloadSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a 
-                href="https://dashboard.infinitepackages.com"
+                href="https://play.google.com/store/apps/details?id=com.salesapp.quickquotes"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black px-7 py-4 rounded-xl font-black text-base transition-all shadow-[0_10px_25px_rgba(224,162,59,0.3)] transform hover:-translate-y-0.5"
               >
-                Launch Mobile App <ArrowRight className="w-5 h-5" />
+                Get on Google Play <ArrowRight className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://dashboard.infinitepackages.com"
+                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white border border-white/20 px-6 py-4 rounded-xl font-bold text-sm transition-all"
+              >
+                Open Web Dashboard <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
