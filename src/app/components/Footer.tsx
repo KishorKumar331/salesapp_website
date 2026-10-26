@@ -80,11 +80,19 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3.5">
                 <li>
+                  <Link 
+                    href="/services" 
+                    className="text-sm text-[#E0A23B] hover:text-[#F1B855] transition-colors font-bold flex items-center gap-1.5"
+                  >
+                    Our Services & Pricing <ArrowUpRight className="w-3.5 h-3.5" />
+                  </Link>
+                </li>
+                <li>
                   <a 
                     href="https://play.google.com/store/apps/details?id=com.salesapp.quickquotes" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-sm text-[#E0A23B] hover:text-[#F1B855] transition-colors font-bold flex items-center gap-1.5"
+                    className="text-sm text-gray-400 hover:text-white transition-colors font-semibold flex items-center gap-1.5"
                   >
                     Get Android App <ArrowUpRight className="w-3.5 h-3.5" />
                   </a>

@@ -11,10 +11,10 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const bannerMessages = [
-    "QuickQuote: Travel Agent CRM Software Built to Close Quotes Faster.",
+    "QuickQuote: Web Dashboard & Android Mobile App bundled at ₹1,999.",
+    "Custom Travel Agency Websites: Connect with our engineering team for bespoke setup.",
     "Unified Travel CRM System: Move WhatsApp inquiries straight to bookings.",
-    "Group Travel CRM: Multi-pax manifests, split payments & instant day-wise PDFs.",
-    "Start Free: Online travel agent software with zero setup fees."
+    "Group Travel CRM: Multi-pax manifests, split payments & instant day-wise PDFs."
   ];
 
   useEffect(() => {
@@ -25,6 +25,7 @@ export default function Navbar() {
   }, [bannerMessages.length]);
 
   const navLinks = [
+    { name: 'Services', href: '/services' },
     { name: 'Features', href: '/#features' },
     { name: 'Group Bookings', href: '/#group-travel' },
     { name: 'Why QuickQuote', href: '/#comparison' },
@@ -44,6 +45,8 @@ export default function Navbar() {
         });
         setIsMobileMenuOpen(false);
       }
+    } else {
+      setIsMobileMenuOpen(false);
     }
   };
 

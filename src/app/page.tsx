@@ -15,6 +15,7 @@ import AppDownloadSection from "./components/AppDownloadSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
+import ServicesSection from "./components/ServicesSection";
 
 export default function Home() {
   // Support / Contact Modal State
@@ -120,6 +121,9 @@ export default function Home() {
             <StoryCarousel />
         </div>
       </section>
+
+      {/* Services Overview Section (Dashboard, Mobile App in 1999, Custom Website) */}
+      <ServicesSection />
 
       {/* Feature Section: Lead & Pipeline Management (Keywords: crm travel agent, crm travel system, travel crm systems, B2B sales travel) */}
       <FeaturesSection />
