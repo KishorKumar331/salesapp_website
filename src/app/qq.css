@@ -1,0 +1,337 @@
+/* Quick Quotes design system. Everything is scoped under .qq so the legal and services pages keep their own styles. */
+.qq {
+  --p: #7C3AED;
+  --p2: #5B21B6;
+  --ink: #1E1B4B;
+  --mute: #5B5B7A;
+  --lav: #F5F3FF;
+  --line: #E9E5FB;
+  --g: #16A34A;
+  font-family: var(--font-jakarta), system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+html { scroll-behavior: smooth; }
+.qq *, .qq *::before, .qq *::after { box-sizing: border-box; }
+.qq a { color: inherit; text-decoration: none; }
+.qq [id] { scroll-margin-top: 80px; }
+.qq .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.qq .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; border-radius: 14px; padding: 15px 24px; font-size: 16px; transition: transform .15s, box-shadow .15s; cursor: pointer; border: 0; font-family: inherit; }
+.qq .btn:hover { transform: translateY(-1px); }
+.qq .btn-p { background: var(--p); color: #fff; box-shadow: 0 8px 24px -8px rgba(124,58,237,.6); }
+.qq .btn-o { background: #fff; color: var(--p2); border: 1.5px solid var(--line); }
+.qq .btn-w { background: #fff; color: var(--p2); }
+
+/* nav */
+.qq-nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.qq-nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.qq .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: -.02em; }
+.qq .logo i { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--p), var(--p2)); display: grid; place-items: center; color: #fff; font-style: normal; font-size: 15px; }
+.qq .logo small { display: block; font-size: 10.5px; font-weight: 600; color: var(--mute); letter-spacing: .02em; margin-top: -3px; }
+.qq .links { display: flex; align-items: center; gap: 26px; font-weight: 600; font-size: 14.5px; color: var(--mute); }
+.qq .links a:hover { color: var(--p); }
+.qq .links .btn { padding: 10px 18px; font-size: 14.5px; color: #fff; }
+.qq .menu-btn { display: none; background: none; border: 0; color: var(--p2); padding: 6px; cursor: pointer; }
+.qq .drawer { display: none; }
+@media (max-width: 860px) {
+  .qq .links .hide-sm { display: none; }
+  .qq .links { gap: 12px; }
+  .qq .menu-btn { display: block; }
+  .qq .drawer.open { display: grid; gap: 4px; padding: 10px 20px 18px; border-top: 1px solid var(--line); background: #fff; }
+  .qq .drawer a { padding: 10px 4px; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--line); }
+}
+
+/* hero */
+.qq .hero { background: radial-gradient(900px 420px at 85% -10%, #EDE7FF 0, transparent 60%), radial-gradient(700px 380px at -10% 20%, #F5F0FF 0, transparent 60%); padding: 56px 0 64px; }
+.qq .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+.qq .tag { display: inline-block; background: var(--lav); color: var(--p2); font-weight: 700; font-size: 13px; padding: 7px 13px; border-radius: 99px; margin-bottom: 18px; }
+.qq h1 { font-size: clamp(34px, 5.2vw, 56px); line-height: 1.08; letter-spacing: -.035em; font-weight: 800; }
+.qq h1 em { font-style: normal; color: var(--p); padding-bottom: 6px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 60 3, 120 12, 180 6 S 270 4, 297 8' fill='none' stroke='%23C4B5FD' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") left 96%/100% 14px no-repeat; }
+.qq .lead { font-size: clamp(16.5px, 1.9vw, 19px); color: var(--mute); margin: 20px 0 28px; max-width: 540px; }
+.qq .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.qq .ticks { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 22px; font-size: 14px; color: var(--mute); font-weight: 500; }
+.qq .ticks span::before { content: "✓"; color: var(--g); font-weight: 800; margin-right: 6px; }
+.qq .phone { width: 290px; margin: 0 auto; background: #14112B; border-radius: 42px; padding: 12px; box-shadow: 0 40px 80px -30px rgba(91,33,182,.55); position: relative; }
+.qq .screen { background: #fff; border-radius: 32px; overflow: hidden; }
+.qq .bar { background: linear-gradient(135deg, var(--p), var(--p2)); color: #fff; padding: 22px 18px 18px; }
+.qq .bar b { font-size: 16px; display: block; } .qq .bar p { font-size: 12px; opacity: .85; }
+.qq .qcard { margin: -10px 14px 0; background: #fff; border-radius: 18px; box-shadow: 0 10px 30px -12px rgba(30,27,75,.3); padding: 16px; position: relative; }
+.qq .qcard h4 { font-size: 17px; font-weight: 700; } .qq .qcard .m { font-size: 12.5px; color: var(--mute); }
+.qq .row { display: flex; justify-content: space-between; font-size: 13px; padding: 7px 0; border-bottom: 1px dashed var(--line); }
+.qq .row:last-of-type { border: 0; }
+.qq .price { font-size: 24px; font-weight: 800; color: var(--p2); margin-top: 6px; }
+.qq .wa { margin: 14px; background: #22C55E; color: #fff; text-align: center; font-weight: 700; border-radius: 12px; padding: 12px; font-size: 14px; }
+.qq .chip { position: absolute; background: #fff; border-radius: 14px; padding: 10px 14px; font-size: 13px; font-weight: 700; box-shadow: 0 12px 30px -12px rgba(30,27,75,.35); white-space: nowrap; }
+.qq .chip.a { left: -52px; top: -18px; } .qq .chip.b { right: -40px; bottom: 96px; }
+.qq .chip small { display: block; font-weight: 500; color: var(--mute); font-size: 11px; }
+.qq .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--g); margin-right: 6px; }
+@media (max-width: 900px) { .qq .hero .wrap { grid-template-columns: 1fr; } .qq .hero-art { margin-top: 16px; } .qq .chip.a { left: -14px; } .qq .chip.b { right: -10px; } }
+
+/* sections */
+.qq section { padding: 76px 0; }
+.qq .eyebrow { color: var(--p); font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 10px; }
+.qq h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; letter-spacing: -.03em; font-weight: 800; max-width: 720px; }
+.qq h3 { font-weight: 700; }
+.qq .sub { color: var(--mute); font-size: 17px; margin-top: 12px; max-width: 620px; }
+
+/* pain */
+.qq .pain { background: var(--lav); }
+.qq .pains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px; }
+.qq .pains > div { background: #fff; border-radius: 20px; padding: 24px; border: 1px solid var(--line); }
+.qq .pains .q { font-size: 30px; line-height: 1; margin-bottom: 12px; }
+.qq .pains h3 { font-size: 18px; line-height: 1.35; letter-spacing: -.01em; }
+.qq .pains p { color: var(--mute); font-size: 14.5px; margin-top: 8px; }
+@media (max-width: 820px) { .qq .pains { grid-template-columns: 1fr; } }
+
+/* whatsapp story */
+.qq .chat { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.qq .wa-phone { max-width: 380px; margin: 0 auto; width: 100%; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 70px -35px rgba(30,27,75,.55); border: 1px solid var(--line); }
+.qq .wa-top { background: #075E54; color: #fff; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+.qq .wa-av { width: 36px; height: 36px; border-radius: 50%; background: #FDE68A; color: #92400E; display: grid; place-items: center; font-weight: 800; }
+.qq .wa-top b { font-size: 15px; display: block; } .qq .wa-top small { font-size: 12px; opacity: .8; }
+.qq .wa-body { background: #ECE5DD; padding: 16px 12px 20px; display: flex; flex-direction: column; gap: 8px; min-height: 380px; }
+.qq .msg { max-width: 82%; padding: 8px 11px 6px; border-radius: 12px; font-size: 14px; line-height: 1.4; box-shadow: 0 1px 1px rgba(0,0,0,.08); opacity: 0; transform: translateY(10px); transition: opacity .45s, transform .45s; }
+.qq .msg.show { opacity: 1; transform: none; }
+.qq .msg.in { background: #fff; align-self: flex-start; border-top-left-radius: 3px; }
+.qq .msg.out { background: #DCF8C6; align-self: flex-end; border-top-right-radius: 3px; }
+.qq .msg time { display: block; text-align: right; font-size: 10.5px; color: #667781; margin-top: 2px; }
+.qq .pdf { display: flex; gap: 10px; align-items: center; background: #fff; border-radius: 9px; padding: 9px; margin-bottom: 5px; }
+.qq .pdf i { width: 34px; height: 40px; border-radius: 6px; background: #E11D48; color: #fff; font-style: normal; font-size: 10px; font-weight: 800; display: grid; place-items: center; }
+.qq .pdf b { font-size: 13px; display: block; } .qq .pdf small { font-size: 11.5px; color: #667781; }
+.qq .timeline { display: grid; gap: 14px; margin-top: 26px; }
+.qq .timeline div { display: flex; gap: 14px; align-items: center; font-weight: 600; }
+.qq .timeline span { min-width: 64px; text-align: center; background: var(--lav); color: var(--p2); border-radius: 10px; padding: 6px 8px; font-weight: 800; font-size: 14px; }
+.qq .timeline .w span { background: #DCFCE7; color: var(--g); }
+@media (max-width: 860px) { .qq .chat { grid-template-columns: 1fr; } }
+
+/* quote demo */
+.qq .demo { background: linear-gradient(180deg, #FBFAFF, #F3EEFF); }
+.qq .demo-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 36px; margin-top: 34px; align-items: start; }
+.qq .ctrl { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 24px; display: grid; gap: 22px; }
+.qq .ctrl .lbl { font-weight: 700; font-size: 14px; display: block; margin-bottom: 10px; }
+.qq .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.qq .chips button { font: inherit; font-weight: 700; font-size: 14px; border: 1.5px solid var(--line); background: #fff; color: var(--ink); border-radius: 99px; padding: 9px 15px; cursor: pointer; transition: all .15s; display: inline-flex; align-items: center; }
+.qq .chips button img { width: 22px; height: 22px; border-radius: 50%; object-fit: cover; margin: -3px 7px -3px -6px; }
+.qq .chips button.on { background: var(--p); border-color: var(--p); color: #fff; }
+.qq .step-in { display: flex; align-items: center; gap: 14px; }
+.qq .step-in button { width: 40px; height: 40px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; font-size: 20px; font-weight: 700; color: var(--p2); cursor: pointer; }
+.qq .step-in b { min-width: 110px; text-align: center; font-size: 17px; }
+.qq .clock { display: flex; align-items: center; justify-content: space-between; background: var(--lav); border-radius: 14px; padding: 12px 16px; font-weight: 700; font-size: 14px; }
+.qq .clock b { font-size: 20px; color: var(--p2); font-variant-numeric: tabular-nums; }
+.qq .doc { background: #fff; border-radius: 22px; overflow: hidden; box-shadow: 0 30px 70px -35px rgba(91,33,182,.5); border: 1px solid var(--line); }
+.qq .cover { padding: 24px; color: #fff; min-height: 230px; display: flex; flex-direction: column; justify-content: flex-end; background-size: cover; background-position: center; text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+.qq .cover small { font-weight: 700; letter-spacing: .12em; font-size: 11px; opacity: .85; }
+.qq .cover h3 { font-size: 30px; letter-spacing: -.02em; margin: 6px 0 4px; font-weight: 800; }
+.qq .cover p { opacity: .9; font-size: 14px; }
+.qq .days { padding: 10px 24px 4px; }
+.qq .day { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; animation: qqpop .35s; }
+.qq .day b { min-width: 52px; color: var(--p2); }
+@keyframes qqpop { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+.qq .doc-foot { display: flex; justify-content: space-between; align-items: end; padding: 16px 24px 22px; gap: 12px; flex-wrap: wrap; }
+.qq .doc-foot .t { font-size: 13px; color: var(--mute); }
+.qq .doc-foot .amt { font-size: 30px; font-weight: 800; letter-spacing: -.02em; }
+.qq .send { font: inherit; border: 0; cursor: pointer; background: #22C55E; color: #fff; font-weight: 700; border-radius: 12px; padding: 12px 18px; font-size: 15px; }
+.qq .toast { margin: 0 24px 22px; background: #F0FDF4; border: 1px solid #BBF7D0; color: var(--g); font-weight: 700; border-radius: 12px; padding: 10px 14px; font-size: 14px; }
+.qq .demo-note { font-size: 13px; color: var(--mute); margin-top: 12px; text-align: center; }
+.qq .photo-credit { font-size: 11px; color: var(--mute); text-align: center; margin-top: 4px; }
+@media (max-width: 860px) { .qq .demo-grid { grid-template-columns: 1fr; } }
+
+/* steps */
+.qq .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 38px; counter-reset: s; }
+.qq .step { position: relative; padding: 22px 18px; border-radius: 20px; border: 1px solid var(--line); background: #fff; }
+.qq .step::before { counter-increment: s; content: counter(s); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: var(--lav); color: var(--p2); font-weight: 800; margin-bottom: 14px; }
+.qq .step:last-child::before { background: #DCFCE7; color: var(--g); }
+.qq .step h3 { font-size: 16.5px; } .qq .step p { font-size: 14px; color: var(--mute); margin-top: 6px; }
+@media (max-width: 980px) { .qq .steps { grid-template-columns: 1fr 1fr; } .qq .step:last-child { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .qq .steps { grid-template-columns: 1fr; } }
+
+/* brand */
+.qq .brand { background: linear-gradient(160deg, var(--p2), #3B0F8C); color: #fff; border-radius: 32px; padding: 56px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.qq .brand h2 { color: #fff; } .qq .brand .sub { color: #DDD3FF; }
+.qq .list { display: grid; gap: 10px; }
+.qq .list div { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: 12px 16px; font-weight: 600; font-size: 15px; }
+.qq .list div::before { content: "✓"; color: #86EFAC; margin-right: 10px; font-weight: 800; }
+.qq .list .x { background: #fff; color: var(--ink); }
+.qq .list .x::before { content: "✕"; color: #E11D48; }
+.qq .list .x small { display: block; color: var(--p); font-weight: 700; margin-top: 2px; margin-left: 24px; }
+@media (max-width: 860px) { .qq .brand { grid-template-columns: 1fr; padding: 40px 24px; } }
+
+/* pricing */
+.qq .pricing .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.qq .card { border: 1.5px solid var(--line); border-radius: 28px; padding: 30px; background: #fff; box-shadow: 0 30px 60px -40px rgba(91,33,182,.45); }
+.qq .card .r { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.qq .card .r s { color: #9A97B5; }
+.qq .you { background: var(--lav); border-radius: 18px; padding: 18px; margin-top: 14px; text-align: center; }
+.qq .you b { display: block; font-size: 40px; letter-spacing: -.03em; color: var(--p2); line-height: 1.1; }
+.qq .you b span { font-size: 18px; color: var(--mute); font-weight: 600; }
+.qq .you > span { color: var(--mute); font-size: 14px; }
+.qq .free { display: flex; gap: 12px; align-items: flex-start; margin-top: 16px; background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 16px; padding: 14px 16px; font-size: 14.5px; }
+.qq .free b { color: var(--g); }
+.qq .fine { font-size: 13px; color: var(--mute); margin-top: 14px; }
+.qq .card .btn { width: 100%; margin-top: 18px; }
+@media (max-width: 860px) { .qq .pricing .wrap { grid-template-columns: 1fr; } }
+
+/* founder */
+.qq .founder { background: var(--lav); }
+.qq .f { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; max-width: 820px; }
+.qq .avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #C4B5FD, var(--p)); display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 40px; border: 5px solid #fff; box-shadow: 0 12px 30px -14px rgba(91,33,182,.6); }
+.qq .f blockquote { font-size: clamp(18px, 2.2vw, 22px); line-height: 1.5; font-weight: 600; letter-spacing: -.01em; }
+.qq .f cite { display: block; margin-top: 12px; font-style: normal; color: var(--mute); font-size: 14.5px; }
+@media (max-width: 600px) { .qq .f { grid-template-columns: 1fr; } }
+
+/* faq */
+.qq .faq { max-width: 760px; margin-top: 30px; }
+.qq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.qq summary { font-weight: 700; font-size: 17px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.qq summary::-webkit-details-marker { display: none; }
+.qq summary::after { content: "+"; color: var(--p); font-size: 22px; line-height: 1; }
+.qq details[open] summary::after { content: "–"; }
+.qq details p { color: var(--mute); margin-top: 10px; font-size: 15.5px; }
+
+/* final */
+.qq .final { text-align: center; background: linear-gradient(160deg, var(--p), var(--p2)); color: #fff; border-radius: 32px; padding: 60px 24px; }
+.qq .final h2 { color: #fff; margin: 0 auto; } .qq .final .sub { color: #E4DCFF; margin: 12px auto 26px; }
+.qq .final .cta { justify-content: center; }
+.qq .final .btn-o { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+
+/* support modal */
+.qq-modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; }
+.qq-modal .shade { position: absolute; inset: 0; background: rgba(30,27,75,.6); backdrop-filter: blur(3px); }
+.qq-modal .box { position: relative; background: #fff; border-radius: 24px; width: 100%; max-width: 480px; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(30,27,75,.6); }
+.qq-modal .head { background: linear-gradient(135deg, var(--p), var(--p2)); color: #fff; padding: 22px 24px; }
+.qq-modal .head h3 { font-size: 22px; font-weight: 800; } .qq-modal .head p { font-size: 14px; opacity: .9; }
+.qq-modal .close { position: absolute; top: 14px; right: 14px; background: none; border: 0; color: #fff; cursor: pointer; }
+.qq-modal form { padding: 22px 24px; display: grid; gap: 14px; }
+.qq-modal label { font-size: 13px; font-weight: 700; display: grid; gap: 6px; }
+.qq-modal input, .qq-modal textarea { font: inherit; font-size: 15px; border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 13px; outline: none; background: #FBFAFF; color: var(--ink); }
+.qq-modal input:focus, .qq-modal textarea:focus { border-color: var(--p); }
+.qq-modal .done { padding: 36px 24px; text-align: center; }
+.qq-modal .done b { display: block; font-size: 20px; margin-bottom: 6px; }
+
+/* footer */
+.qq-footer { padding: 40px 0; color: var(--mute); font-size: 14px; border-top: 1px solid var(--line); }
+.qq-footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
+.qq-footer .fl { display: flex; gap: 18px; flex-wrap: wrap; }
+.qq-footer a:hover { color: var(--p); }
+
+/* floating WhatsApp */
+.qq-wa-float { position: fixed; bottom: 22px; right: 22px; z-index: 60; display: flex; align-items: center; gap: 10px; background: #25D366; color: #fff; padding: 12px 16px; border-radius: 99px; font-weight: 700; font-size: 14px; box-shadow: 0 10px 30px -8px rgba(37,211,102,.55); }
+.qq-wa-float span { max-width: 0; overflow: hidden; white-space: nowrap; transition: max-width .3s; }
+.qq-wa-float:hover span { max-width: 160px; }
+
+/* ---------- services page ---------- */
+.qq .jump { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+.qq .jump a { background: #fff; border: 1.5px solid var(--line); border-radius: 99px; padding: 9px 16px; font-weight: 700; font-size: 14px; color: var(--p2); }
+.qq .jump a:hover { border-color: var(--p); }
+.qq .svc { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.qq .svc.flip > :first-child { order: 2; }
+.qq .alt { background: var(--lav); }
+.qq .feats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; margin: 26px 0 28px; }
+.qq .feats div b { display: block; font-size: 15px; }
+.qq .feats div b::before { content: "✓"; color: var(--g); font-weight: 800; margin-right: 8px; }
+.qq .feats div p { color: var(--mute); font-size: 14px; margin-top: 3px; padding-left: 22px; }
+.qq .price-note { display: inline-flex; gap: 10px; align-items: baseline; background: var(--lav); color: var(--p2); border-radius: 12px; padding: 8px 14px; font-weight: 700; font-size: 14px; margin-top: 16px; }
+.qq .alt .price-note { background: #fff; }
+.qq .price-note b { font-size: 18px; }
+@media (max-width: 900px) { .qq .svc { grid-template-columns: 1fr; gap: 36px; } .qq .svc.flip > :first-child { order: 0; } }
+@media (max-width: 560px) { .qq .feats { grid-template-columns: 1fr; } }
+
+/* dashboard mockup */
+.qq .dash { background: #fff; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; box-shadow: 0 30px 70px -35px rgba(91,33,182,.5); }
+.qq .dash .top { display: flex; gap: 6px; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--mute); }
+.qq .dash .top i { width: 10px; height: 10px; border-radius: 50%; background: #E9E5FB; }
+.qq .dash .top span { margin-left: 10px; }
+.qq .dash .body { padding: 20px; display: grid; gap: 16px; }
+.qq .pipe { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.qq .pipe div { background: var(--lav); border-radius: 12px; padding: 10px; text-align: center; font-size: 12px; color: var(--mute); font-weight: 600; }
+.qq .pipe b { display: block; font-size: 22px; color: var(--p2); }
+.qq .pipe div:last-child { background: #DCFCE7; } .qq .pipe div:last-child b { color: var(--g); }
+.qq .qrow { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+.qq .qrow .t { display: flex; justify-content: space-between; gap: 10px; font-weight: 700; }
+.qq .qrow .t span { color: var(--p2); }
+.qq .qrow .m { font-size: 13px; color: var(--mute); margin-top: 4px; }
+.qq .qrow .margin { display: flex; justify-content: space-between; margin-top: 10px; font-size: 13px; background: #F0FDF4; color: var(--g); font-weight: 700; padding: 8px 10px; border-radius: 10px; }
+
+/* app mockup */
+.qq .app-card { margin: 14px; border: 1px solid var(--line); border-radius: 16px; padding: 14px; }
+.qq .app-card .t { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; }
+.qq .app-card .t span { color: var(--p2); }
+.qq .app-card .m { font-size: 12.5px; color: var(--mute); margin: 2px 0 10px; }
+.qq .app-card .wa { margin: 0; }
+.qq .notif { margin: 0 14px 16px; background: var(--lav); border-radius: 14px; padding: 12px; font-size: 13px; }
+.qq .notif b { display: block; color: var(--p2); }
+
+/* website mockup */
+.qq .site { background: #fff; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; box-shadow: 0 30px 70px -35px rgba(91,33,182,.5); }
+.qq .site .url { margin-left: 10px; background: var(--lav); border-radius: 8px; padding: 4px 10px; color: var(--p2); font-weight: 700; }
+.qq .site .hdr { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; font-weight: 800; }
+.qq .site .hdr span { background: var(--p); color: #fff; font-size: 12px; border-radius: 99px; padding: 6px 12px; }
+.qq .site .banner { margin: 0 14px; border-radius: 16px; min-height: 190px; padding: 18px; color: #fff; display: flex; flex-direction: column; justify-content: flex-end; background-size: cover; background-position: center; text-shadow: 0 2px 10px rgba(0,0,0,.4); }
+.qq .site .banner small { font-weight: 700; font-size: 11px; letter-spacing: .1em; opacity: .9; }
+.qq .site .banner b { font-size: 20px; }
+.qq .site .banner p { font-size: 13px; opacity: .9; }
+.qq .site .enq { margin: 14px; display: flex; align-items: center; gap: 10px; background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 14px; padding: 12px 14px; font-size: 13.5px; font-weight: 600; color: var(--g); }
+
+/* comparison table */
+.qq .matrix { margin-top: 32px; border: 1px solid var(--line); border-radius: 22px; overflow: auto; background: #fff; }
+.qq .matrix table { width: 100%; border-collapse: collapse; min-width: 620px; font-size: 14.5px; }
+.qq .matrix th, .qq .matrix td { padding: 14px 18px; text-align: center; border-bottom: 1px solid var(--line); }
+.qq .matrix th { background: var(--lav); color: var(--p2); font-weight: 800; }
+.qq .matrix th:first-child, .qq .matrix td:first-child { text-align: left; }
+.qq .matrix td:first-child { font-weight: 600; }
+.qq .matrix tr:last-child td { border-bottom: 0; }
+.qq .matrix .y { color: var(--g); font-weight: 800; }
+.qq .matrix .n { color: #C9C5DE; }
+.qq .matrix .s { color: var(--mute); font-size: 13px; }
+
+/* consultation form */
+.qq .connect { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: start; }
+.qq .channels { display: grid; gap: 12px; margin-top: 26px; }
+.qq .channels a { display: flex; gap: 14px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; font-weight: 700; }
+.qq .channels a small { display: block; font-weight: 500; color: var(--mute); font-size: 13px; }
+.qq .channels .ic { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--lav); color: var(--p2); flex: none; }
+.qq .formcard { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 28px; box-shadow: 0 30px 60px -40px rgba(91,33,182,.45); }
+.qq .formcard h3 { font-size: 22px; font-weight: 800; }
+.qq .formcard form { display: grid; gap: 14px; margin-top: 18px; }
+.qq .formcard .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.qq .formcard label { font-size: 13px; font-weight: 700; display: grid; gap: 6px; }
+.qq .formcard input, .qq .formcard select, .qq .formcard textarea { font: inherit; font-size: 15px; border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 13px; outline: none; background: #FBFAFF; color: var(--ink); width: 100%; }
+.qq .formcard input:focus, .qq .formcard select:focus, .qq .formcard textarea:focus { border-color: var(--p); }
+.qq .formcard .done { text-align: center; padding: 30px 0; }
+.qq .formcard .done b { display: block; font-size: 20px; margin-bottom: 6px; }
+@media (max-width: 900px) { .qq .connect { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .qq .formcard .two { grid-template-columns: 1fr; } }
+
+/* ---------- legal pages ---------- */
+.qq .legal-hero { padding: 48px 0 28px; }
+.qq .legal-hero .meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.qq .legal-hero .meta span { background: var(--lav); color: var(--p2); font-weight: 700; font-size: 13px; padding: 6px 12px; border-radius: 99px; }
+.qq .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 26px; }
+.qq .summary div { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 16px; font-size: 14px; color: var(--mute); }
+.qq .summary b { display: block; color: var(--ink); font-size: 15px; margin-bottom: 4px; }
+@media (max-width: 900px) { .qq .summary { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .qq .summary { grid-template-columns: 1fr; } }
+.qq .legal { display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start; padding-bottom: 72px; }
+.qq .toc { position: sticky; top: 88px; display: grid; gap: 2px; font-size: 14px; }
+.qq .toc b { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--p); margin-bottom: 8px; }
+.qq .toc a { color: var(--mute); padding: 5px 0; font-weight: 600; }
+.qq .toc a:hover { color: var(--p); }
+.qq .legal article { max-width: 760px; }
+.qq .legal article section { padding: 0 0 34px; }
+.qq .legal article h2 { font-size: clamp(22px, 2.6vw, 27px); margin-bottom: 12px; }
+.qq .legal article h3 { font-size: 17px; margin: 18px 0 6px; }
+.qq .legal article p, .qq .legal article li { color: #46466A; font-size: 15.5px; }
+.qq .legal article p + p { margin-top: 10px; }
+.qq .legal article ul { padding-left: 20px; display: grid; gap: 7px; margin-top: 8px; }
+.qq .legal article a { color: var(--p2); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.qq .callout { background: var(--lav); border-radius: 18px; padding: 18px 20px; margin-top: 14px; }
+.qq .callout b { color: var(--p2); }
+.qq .secgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.qq .secgrid div { border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+.qq .secgrid b { display: block; margin-bottom: 4px; }
+.qq .secgrid p { font-size: 14.5px !important; }
+.qq .contact-card { border: 1.5px solid var(--line); border-radius: 20px; padding: 22px; display: grid; gap: 6px; }
+@media (max-width: 900px) { .qq .legal { grid-template-columns: 1fr; gap: 20px; } .qq .toc { position: static; grid-template-columns: 1fr 1fr; } .qq .toc b { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .qq .secgrid { grid-template-columns: 1fr; } }
