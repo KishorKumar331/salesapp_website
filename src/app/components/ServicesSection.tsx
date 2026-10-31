@@ -38,7 +38,7 @@ export default function ServicesSection() {
         'Automated quote expiry & client reminder triggers'
       ],
       ctaText: 'Access Dashboard',
-      ctaHref: 'https://dashboard.infinitepackages.com',
+      ctaHref: 'https://quick-quote.incognitosolution.com',
       isExternal: true,
       popular: false
     },

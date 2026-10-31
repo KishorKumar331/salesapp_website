@@ -203,7 +203,7 @@ export default function ProfitCalculator() {
               Stop splitting margins. Build your independent travel agency equity today.
             </span>
             <a 
-              href="https://dashboard.infinitepackages.com"
+              href="https://quick-quote.incognitosolution.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black font-black px-6 py-3.5 rounded-xl text-sm transition-all transform hover:-translate-y-0.5 shadow-lg"
             >
               Start Generating Profit <ArrowRight className="w-4 h-4" />

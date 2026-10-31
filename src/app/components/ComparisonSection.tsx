@@ -133,7 +133,7 @@ export default function ComparisonSection() {
 
         <div className="text-center">
           <a
-            href="https://dashboard.infinitepackages.com"
+            href="https://quick-quote.incognitosolution.com"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] hover:from-[#1C6C5E] hover:to-[#0E3B34] text-white px-8 py-4 rounded-full font-black text-base shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5"
           >
             Switch to QuickQuote Free <ArrowRight className="w-5 h-5" />

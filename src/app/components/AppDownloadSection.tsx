@@ -105,7 +105,7 @@ export default function AppDownloadSection() {
                 Get on Google Play <ArrowRight className="w-5 h-5" />
               </a>
               <a 
-                href="https://dashboard.infinitepackages.com"
+                href="https://quick-quote.incognitosolution.com"
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white border border-white/20 px-6 py-4 rounded-xl font-bold text-sm transition-all"
               >
                 Open Web Dashboard <ExternalLink className="w-4 h-4" />

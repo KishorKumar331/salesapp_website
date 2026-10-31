@@ -115,7 +115,7 @@ export default function GroupBookingsSection() {
             </p>
           </div>
           <a
-            href="https://dashboard.infinitepackages.com"
+            href="https://quick-quote.incognitosolution.com"
             className="bg-[#E0A23B] hover:bg-[#F1B855] text-black px-7 py-3.5 rounded-full font-black text-sm transition-all shadow-md hover:shadow-lg whitespace-nowrap flex items-center gap-2 transform hover:-translate-y-0.5"
           >
             Create Group Quote <ArrowRight className="w-4 h-4" />

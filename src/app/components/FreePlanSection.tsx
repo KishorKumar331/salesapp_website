@@ -53,7 +53,7 @@ export default function FreePlanSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="https://dashboard.infinitepackages.com"
+                href="https://quick-quote.incognitosolution.com"
                 className="w-full sm:w-auto bg-gradient-to-r from-[#E0A23B] to-[#F1B855] hover:from-[#F1B855] hover:to-[#E0A23B] text-black px-10 py-4 rounded-full font-black text-lg shadow-[0_10px_25px_rgba(224,162,59,0.35)] hover:shadow-[0_15px_35px_rgba(224,162,59,0.45)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
               >
                 Create Free Account <ArrowRight className="w-5 h-5" />
