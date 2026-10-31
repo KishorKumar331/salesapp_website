@@ -26,7 +26,7 @@ export default function AppDownloadSection() {
                      {/* Pseudo App Header */}
                      <div className="px-4 pb-3 border-b border-gray-100 flex justify-between items-center bg-white">
                        <div>
-                         <span className="font-black text-xs text-[#0E3B34] block">Infinite Packages</span>
+                         <span className="font-black text-xs text-[#0E3B34] block">IP</span>
                          <span className="text-[9px] text-gray-400 font-bold block">Advisor Dashboard</span>
                        </div>
                        <div className="w-7 h-7 bg-[#0E3B34]/10 text-[#0E3B34] rounded-full flex items-center justify-center font-black text-xs">

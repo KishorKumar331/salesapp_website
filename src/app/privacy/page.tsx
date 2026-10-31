@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const UPDATED = "29 October 2026";
-const EMAIL = "support@infinitepackages.com";
+const EMAIL = "support@incognitosolution.com";
 const PHONE = "+91 88824 14703";
 
 const SECTIONS = [

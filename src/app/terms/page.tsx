@@ -18,7 +18,7 @@ export default function TermsPage() {
             
             <section className="bg-blue-50/50 p-6 rounded-xl border border-blue-100 mb-8">
               <p className="text-[#041422] font-black mb-2">Important Notice for Travel Partners:</p>
-              <p className="text-sm">These terms govern your use of the Infinite Packages B2B platform. By acting as a travel agent, sub-agent, or affiliate utilizing our CRM and booking management tools, you agree strictly to the following B2B terms of service.</p>
+              <p className="text-sm">These terms govern your use of the IP B2B platform. By acting as a travel agent, sub-agent, or affiliate utilizing our CRM and booking management tools, you agree strictly to the following B2B terms of service.</p>
             </section>
 
             <section>
@@ -26,7 +26,7 @@ export default function TermsPage() {
                 <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
                 B2B Agency & Relationship
               </h2>
-              <p className="pl-11">Infinite Packages provides a B2B SaaS platform for travel management. We are a technology provider, not a principal travel supplier. Your relationship with us is strictly as an independent B2B partner. You are solely responsible for all interactions, commitments, pricing markups, and disclosures made to your end-customers.</p>
+              <p className="pl-11">IP provides a B2B SaaS platform for travel management. We are a technology provider, not a principal travel supplier. Your relationship with us is strictly as an independent B2B partner. You are solely responsible for all interactions, commitments, pricing markups, and disclosures made to your end-customers.</p>
             </section>
 
             <section>
@@ -34,7 +34,7 @@ export default function TermsPage() {
                 <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
                 Pricing, Markups & End-Customer Liability
               </h2>
-              <p className="pl-11">You have full control over the markups added to net rates generated via our quotation system. You bear absolute liability for ensuring your pricing complies with local laws, tax regulations (including GST), and consumer protection laws. Infinite Packages is not liable for any disputes between you and your end-customer regarding pricing, quality of service, or unmet travel expectations.</p>
+              <p className="pl-11">You have full control over the markups added to net rates generated via our quotation system. You bear absolute liability for ensuring your pricing complies with local laws, tax regulations (including GST), and consumer protection laws. IP is not liable for any disputes between you and your end-customer regarding pricing, quality of service, or unmet travel expectations.</p>
             </section>
 
             <section>
@@ -42,7 +42,7 @@ export default function TermsPage() {
                 <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
                 Supplier Failures & API Discrepancies
               </h2>
-              <p className="pl-11">Our platform may integrate with third-party aggregators (similar to TBO, Tripjack) or direct APIs. We cannot guarantee real-time absolute accuracy of third-party inventory or pricing until final confirmation. Infinite Packages holds no liability for bookings dropped due to supplier rejection, API timeouts, or unnotified inventory changes.</p>
+              <p className="pl-11">Our platform may integrate with third-party aggregators (similar to TBO, Tripjack) or direct APIs. We cannot guarantee real-time absolute accuracy of third-party inventory or pricing until final confirmation. IP holds no liability for bookings dropped due to supplier rejection, API timeouts, or unnotified inventory changes.</p>
             </section>
 
             <section>
@@ -50,7 +50,7 @@ export default function TermsPage() {
                 <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
                 Cancellations & Refunds Policy
               </h2>
-              <p className="pl-11">Cancellations are strictly governed by the actual travel suppliers (Airlines, Hotels, DMCs). We only pass through the supplier&apos;s cancellation terms. Any platform usage fees or software subscription fees paid to Infinite Packages are non-refundable unless explicitly stated otherwise.</p>
+              <p className="pl-11">Cancellations are strictly governed by the actual travel suppliers (Airlines, Hotels, DMCs). We only pass through the supplier&apos;s cancellation terms. Any platform usage fees or software subscription fees paid to IP are non-refundable unless explicitly stated otherwise.</p>
             </section>
 
             <section>
@@ -58,7 +58,7 @@ export default function TermsPage() {
                 <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">5</span>
                 Platform Availability & &quot;As-Is&quot; Provision
               </h2>
-              <p className="pl-11">The Service is provided &quot;as is&quot; and &quot;as available&quot;. While we strive for 99.9% uptime, infinite Packages makes no warranty that the Android App, Web Dashboard, or quote generation features will be completely error-free or strictly continuous. We are not liable for business loss due to temporary technical downtime.</p>
+              <p className="pl-11">The Service is provided &quot;as is&quot; and &quot;as available&quot;. While we strive for 99.9% uptime, IP makes no warranty that the Android App, Web Dashboard, or quote generation features will be completely error-free or strictly continuous. We are not liable for business loss due to temporary technical downtime.</p>
             </section>
 
             <section>
@@ -72,16 +72,16 @@ export default function TermsPage() {
             <section className="bg-gray-50 rounded-xl p-6 border border-gray-100 mt-12">
               <h2 className="text-xl font-bold text-[#041422] mb-4">Contact & Support</h2>
               <div className="text-gray-600">
-                <p className="font-bold text-gray-900 mb-2">Infinite Packages</p>
+                <p className="font-bold text-gray-900 mb-2">IP</p>
                 <p>Phone: 8882414703</p>
-                <p>Email: <a href="mailto:support@infinitepackages.com" className="text-[#0E3B34] hover:underline">support@infinitepackages.com</a></p>
-                <p>Website: www.infinitepackages.com</p>
+                <p>Email: <a href="mailto:support@incognitosolution.com" className="text-[#0E3B34] hover:underline">support@incognitosolution.com</a></p>
+                <p>Website: www.incognitosolution.com</p>
               </div>
             </section>
 
             <div className="pt-8 mt-8 border-t border-gray-100 text-center">
               <p className="text-gray-500 text-sm">
-                For questions about these Terms, contact us at <a href="mailto:support@infinitepackages.com" className="text-[#0E3B34] font-bold hover:underline">support@infinitepackages.com</a>
+                For questions about these Terms, contact us at <a href="mailto:support@incognitosolution.com" className="text-[#0E3B34] font-bold hover:underline">support@incognitosolution.com</a>
               </p>
             </div>
           </div>

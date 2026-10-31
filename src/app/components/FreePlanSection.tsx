@@ -59,7 +59,7 @@ export default function FreePlanSection() {
                 Create Free Account <ArrowRight className="w-5 h-5" />
               </a>
               <a
-                href="mailto:tech.support@infinitepackages.com?subject=QuickQuote Demo Request"
+                href="mailto:tech.support@incognitosolution.com?subject=QuickQuote Demo Request"
                 className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-full font-bold text-base transition-all flex items-center justify-center gap-2"
               >
                 Book a Guided Demo
