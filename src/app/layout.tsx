@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
-    url: "https://infinitepackages.com",
+    url: "https://www.incognitosolution.com",
     siteName: "Quick Quotes by IP",
     locale: "en_IN",
     type: "website",

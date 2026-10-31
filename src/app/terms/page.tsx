@@ -1,92 +1,145 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Footer from "../components/Footer";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions | Quick Quotes by IP",
+  description: "The terms for using Quick Quotes, the travel quotation and booking software by IP.",
+};
+
+const UPDATED = "31 October 2026";
+const EMAIL = "support@incognitosolution.com";
+const PHONE = "+91 88824 14703";
+
+const SECTIONS = [
+  ["relationship", "Our relationship"],
+  ["pricing", "Your pricing and your clients"],
+  ["suppliers", "Suppliers and third-party data"],
+  ["cancellations", "Cancellations"],
+  ["availability", "Service availability"],
+  ["account", "Your account and your data"],
+  ["contact", "Contact"],
+] as const;
+
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-[#f8fafd] text-gray-900 pb-12">
-      {/* Header Decoration */}
-      <div className="w-full h-48 bg-gradient-to-r from-[#0E3B34] to-[#1C6C5E] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-      </div>
-
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 relative z-10">
-        <div className="bg-white rounded-2xl shadow-[0_8px_30px_-4px_rgba(14,59,52,0.1)] p-8 md:p-12 border border-blue-50">
-          <div className="border-b border-gray-100 pb-8 mb-8">
-            <h1 className="text-4xl font-sans font-black text-[#041422] mb-3">Terms & Conditions</h1>
-            <div className="w-16 h-1.5 bg-gradient-to-r from-[#E0A23B] to-[#F1B855] rounded-full mb-4"></div>
-            <p className="text-gray-500 text-sm font-medium">Last updated: November 2025</p>
-          </div>
-          
-          <div className="space-y-8 text-gray-600 text-base font-medium leading-relaxed">
-            
-            <section className="bg-blue-50/50 p-6 rounded-xl border border-blue-100 mb-8">
-              <p className="text-[#041422] font-black mb-2">Important Notice for Travel Partners:</p>
-              <p className="text-sm">These terms govern your use of the IP B2B platform. By acting as a travel agent, sub-agent, or affiliate utilizing our CRM and booking management tools, you agree strictly to the following B2B terms of service.</p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-[#0E3B34] mb-3 flex items-center">
-                <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
-                B2B Agency & Relationship
-              </h2>
-              <p className="pl-11">IP provides a B2B SaaS platform for travel management. We are a technology provider, not a principal travel supplier. Your relationship with us is strictly as an independent B2B partner. You are solely responsible for all interactions, commitments, pricing markups, and disclosures made to your end-customers.</p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-[#0E3B34] mb-3 flex items-center">
-                <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
-                Pricing, Markups & End-Customer Liability
-              </h2>
-              <p className="pl-11">You have full control over the markups added to net rates generated via our quotation system. You bear absolute liability for ensuring your pricing complies with local laws, tax regulations (including GST), and consumer protection laws. IP is not liable for any disputes between you and your end-customer regarding pricing, quality of service, or unmet travel expectations.</p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-[#0E3B34] mb-3 flex items-center">
-                <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
-                Supplier Failures & API Discrepancies
-              </h2>
-              <p className="pl-11">Our platform may integrate with third-party aggregators (similar to TBO, Tripjack) or direct APIs. We cannot guarantee real-time absolute accuracy of third-party inventory or pricing until final confirmation. IP holds no liability for bookings dropped due to supplier rejection, API timeouts, or unnotified inventory changes.</p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-[#0E3B34] mb-3 flex items-center">
-                <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
-                Cancellations & Refunds Policy
-              </h2>
-              <p className="pl-11">Cancellations are strictly governed by the actual travel suppliers (Airlines, Hotels, DMCs). We only pass through the supplier&apos;s cancellation terms. Any platform usage fees or software subscription fees paid to IP are non-refundable unless explicitly stated otherwise.</p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-[#0E3B34] mb-3 flex items-center">
-                <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">5</span>
-                Platform Availability & &quot;As-Is&quot; Provision
-              </h2>
-              <p className="pl-11">The Service is provided &quot;as is&quot; and &quot;as available&quot;. While we strive for 99.9% uptime, IP makes no warranty that the Android App, Web Dashboard, or quote generation features will be completely error-free or strictly continuous. We are not liable for business loss due to temporary technical downtime.</p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-[#0E3B34] mb-3 flex items-center">
-                <span className="bg-[#0E3B34]/10 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">6</span>
-                Generated Data & Account Security
-              </h2>
-              <p className="pl-11">You are responsible for maintaining the confidentiality of your B2B login credentials. You are responsible for the accuracy of all invoices and PDF itineraries generated using our system. Misuse, scraping our technology, or sharing accounts across multiple un-licensed branch offices violates these terms.</p>
-            </section>
-
-            <section className="bg-gray-50 rounded-xl p-6 border border-gray-100 mt-12">
-              <h2 className="text-xl font-bold text-[#041422] mb-4">Contact & Support</h2>
-              <div className="text-gray-600">
-                <p className="font-bold text-gray-900 mb-2">IP</p>
-                <p>Phone: 8882414703</p>
-                <p>Email: <a href="mailto:support@incognitosolution.com" className="text-[#0E3B34] hover:underline">support@incognitosolution.com</a></p>
-                <p>Website: www.incognitosolution.com</p>
-              </div>
-            </section>
-
-            <div className="pt-8 mt-8 border-t border-gray-100 text-center">
-              <p className="text-gray-500 text-sm">
-                For questions about these Terms, contact us at <a href="mailto:support@incognitosolution.com" className="text-[#0E3B34] font-bold hover:underline">support@incognitosolution.com</a>
-              </p>
+    <>
+      <div className="qq">
+        <header className="hero legal-hero">
+          <div className="wrap" style={{ display: "block" }}>
+            <span className="tag">Terms &amp; conditions</span>
+            <h1 style={{ maxWidth: 820 }}>The terms for using <em>Quick Quotes.</em></h1>
+            <p className="lead" style={{ maxWidth: 680 }}>
+              These terms apply when you use Quick Quotes by IP as a travel seller, agent, sub-agent or partner. By
+              using our web dashboard, Android app or quote tools, you agree to them.
+            </p>
+            <div className="meta">
+              <span>Last updated: {UPDATED}</span>
+              <span>Applies to the web dashboard, Android app and quote tools</span>
+            </div>
+            <div className="summary">
+              <div><b>We&apos;re the software</b>Not a travel supplier or agent.</div>
+              <div><b>Your prices, your call</b>You set markups and deal with your clients.</div>
+              <div><b>Your login, your responsibility</b>Keep it safe and don&apos;t share accounts.</div>
+              <div><b>Questions?</b>We&apos;re a WhatsApp or email away.</div>
             </div>
           </div>
+        </header>
+
+        <div className="wrap legal">
+          <nav className="toc" aria-label="On this page">
+            <b>On this page</b>
+            {SECTIONS.map(([id, label]) => (
+              <a key={id} href={`#${id}`}>{label}</a>
+            ))}
+          </nav>
+
+          <article>
+            <section id="relationship">
+              <h2>1. Our relationship</h2>
+              <p>
+                IP provides Quick Quotes, a business-to-business software platform for travel management. We are a
+                technology provider, not a travel supplier or principal. You use Quick Quotes as an independent
+                business.
+              </p>
+              <p>
+                You are responsible for everything you say, promise, charge and disclose to your own clients.
+              </p>
+            </section>
+
+            <section id="pricing">
+              <h2>2. Your pricing and your clients</h2>
+              <p>
+                You have full control over the markups you add to costs in Quick Quotes. You are responsible for making
+                sure your prices follow local laws, tax rules (including GST) and consumer protection laws.
+              </p>
+              <p>
+                IP is not responsible for disputes between you and your clients about pricing, service quality or
+                travel expectations.
+              </p>
+            </section>
+
+            <section id="suppliers">
+              <h2>3. Suppliers and third-party data</h2>
+              <p>
+                Quick Quotes may connect to third-party suppliers, aggregators or other services. We can&apos;t
+                guarantee that their availability or prices are accurate until a booking is confirmed with them.
+              </p>
+              <p>
+                IP is not responsible for bookings lost because a supplier rejects them, a connection times out, or
+                inventory changes without notice.
+              </p>
+            </section>
+
+            <section id="cancellations">
+              <h2>4. Cancellations</h2>
+              <p>
+                <b>Trips you sell:</b> cancellations are governed by the actual suppliers, such as airlines, hotels and
+                DMCs, and by your own terms with your clients. We only pass on the supplier&apos;s cancellation terms.
+              </p>
+              <p>
+                <b>Your Quick Quotes subscription:</b> you can cancel any time. How cancellation and payments work is
+                explained in our <Link href="/refunds">Cancellation Policy</Link>.
+              </p>
+            </section>
+
+            <section id="availability">
+              <h2>5. Service availability</h2>
+              <p>
+                Quick Quotes is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;. We work hard to keep it
+                running smoothly and aim for 99.9% uptime, but we can&apos;t promise that the Android app, web
+                dashboard or quote features will always be error-free or uninterrupted.
+              </p>
+              <p>IP is not liable for business losses caused by temporary technical downtime.</p>
+            </section>
+
+            <section id="account">
+              <h2>6. Your account and your data</h2>
+              <ul>
+                <li>Keep your login details safe. You are responsible for activity on your account.</li>
+                <li>You are responsible for checking the accuracy of the quotes, invoices and PDFs you create.</li>
+                <li>Don&apos;t misuse or scrape the platform, and don&apos;t share one account across separate branches or businesses.</li>
+              </ul>
+              <p>
+                How we handle your data, and your clients&apos; data, is explained in our{" "}
+                <Link href="/privacy">Privacy &amp; Security Policy</Link>.
+              </p>
+            </section>
+
+            <section id="contact">
+              <h2>7. Contact</h2>
+              <p>Questions about these terms? We&apos;re happy to help.</p>
+              <div className="contact-card" style={{ marginTop: 12 }}>
+                <b>IP</b>
+                <span>Email: <a href={`mailto:${EMAIL}`}>{EMAIL}</a></span>
+                <span>Phone / WhatsApp: {PHONE}</span>
+                <span>Website: <a href="https://www.incognitosolution.com">www.incognitosolution.com</a></span>
+              </div>
+            </section>
+          </article>
         </div>
-      </main>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }
